@@ -6,7 +6,7 @@
 .container
 	margin: 0 auto
 	max-width: $container-max-width
-	padding: 0 2.0rem
+	padding: 0 $gutter-width
 	position: relative
 	width: 100%
 
@@ -29,10 +29,6 @@
 
 		&> .column
 			padding: 0
-
-	// & + .row
-	// 	margin-top: -.5rem
-	// 	padding-top: 0
 
 	// Vertically Align Columns
 	// .row-* vertically aligns every .col in the .row
@@ -152,9 +148,9 @@
 
 	.row
 		flex-direction: row
-		margin-left: -1.0rem
-		width: calc(100% + 2.0rem)
+		margin-left: -$gutter-width
+		width: calc(100% + 2.0rem) // Should use gutter width
 
 		.column
 			margin-bottom: inherit
-			padding: 0 1.0rem
+			padding: 0 $gutter-width

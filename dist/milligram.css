@@ -28,8 +28,8 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 112rem;
-  padding: 0 2rem;
+  max-width: 120rem;
+  padding: 0 1rem;
   position: relative;
   width: 100%;
 }
