@@ -10,19 +10,6 @@ module.exports = function ( grunt ) {
 	// Define the configuration
 	grunt.initConfig({
 
-		// Specifics of npm's package.json handling
-		pkg: grunt.file.readJSON( 'package.json' ),
-
-		// Banner
-		banner:
-			'/*!\n'+
-			' * Milligram v<%= pkg.version %>\n'+
-			' * <%= pkg.homepage %>\n'+
-			' *\n'+
-			' * Copyright (c) '+new Date().getFullYear()+' CJ Patoilo\n'+
-			' * Licensed under the <%= pkg.license %> license\n'+
-			'*/\n\n',
-
 		// DEFAULT TASK
 		// ================================================================
 
@@ -60,45 +47,19 @@ module.exports = function ( grunt ) {
 
 		// Compile Sass files to CSS
 		sass: {
-			minify: {
-				options: {
-					banner: '<%= banner %>',
-					noCache: true,
-					sourcemap: 'none',
-					style: 'compressed'
-				},
+			options: {
+				sourceMap: true,
+				outputStyle: 'compressed'
+			},
+			dev: {
 				files: {
-					'dist/milligram.min.css': [ 'src/**/*.sass', '!src/**/_*.sass' ]
+					'dist/MilliGrid.css': 'src/**/*.sass'
 				}
 			},
-			default: {
-				options: {
-					banner: '<%= banner %>',
-					noCache: true,
-					sourcemap: 'none',
-					style: 'expanded'
-				},
-				files: {
-					'dist/milligram.css': [ 'src/**/*.sass', '!src/**/_*.sass' ]
-				}
-			}
 		},
 
 		// Parse CSS and add vendor-prefixed CSS properties using the Can I Use database.
 		autoprefixer: {
-			minify: {
-				options: {
-					browsers: [
-						'last 1 versions'
-					],
-					map: {
-						inline: false
-					}
-				},
-				files: {
-					'dist/milligram.min.css': 'dist/milligram.min.css'
-				}
-			},
 			default: {
 				options: {
 					browsers: [
@@ -107,7 +68,7 @@ module.exports = function ( grunt ) {
 					map: false
 				},
 				files: {
-					'dist/milligram.css': 'dist/milligram.css'
+					'dist/MilliGrid.css': 'dist/MilliGrid.css'
 				}
 			}
 		}
