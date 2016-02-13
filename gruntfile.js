@@ -20,7 +20,7 @@ module.exports = function ( grunt ) {
 			},
 			grunt: {
 				files: [
-					'gruntfile.js'
+					'Gruntfile.js'
 				],
 				options: {
 					reload: true
