@@ -9,6 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 
 	<link rel="stylesheet" href="../dist/MilliGrid.css">
 
@@ -31,8 +32,12 @@
 			top: 1rem;
 			right: 1rem;
 			z-index: 100;
-			background-color: white;
+			background-color: #fff;
 			box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+		}
+		a.show-guidelines:hover {
+			background-color: #000;
+			color: #fff;
 		}
 	</style>
 	
@@ -122,43 +127,9 @@
 			</div>
 		</div>
 		<h1>Maximum Number Of Items Per Row Tests</h1>
-		<p>Demonstrates the limiting of the number of items that are allowed to inhabit a row before wrapping occurs. If the container-width has been specified as a percentage this will be maintained as the grid grows and shrinks. If the container width has been specified as an absolute value the columns will wrap more as the screen shrinks. Numbers which divide evenly into the overall maximum number of columns (12 in this case should align correctly to the grid)</p>
+		<p>Demonstrates the limiting of the number of items that are allowed to inhabit a row before wrapping occurs. If the container-width has been specified as a percentage this will be maintained as the grid grows and shrinks. If the container width has been specified as an absolute value the columns will wrap more as the screen shrinks. Numbers which divide evenly into the overall maximum number of columns (12 in this case should align correctly to the grid).</p>
 		<h2>12 Items</h2>
 		<div class="row row-12">
-			<div class="column"><p>Item 1</p></div>
-			<div class="column"><p>Item 2</p></div>
-			<div class="column"><p>Item 3</p></div>
-			<div class="column"><p>Item 4</p></div>
-			<div class="column"><p>Item 5</p></div>
-			<div class="column"><p>Item 6</p></div>
-			<div class="column"><p>Item 7</p></div>
-			<div class="column"><p>Item 8</p></div>
-			<div class="column"><p>Item 9</p></div>
-			<div class="column"><p>Item 10</p></div>
-			<div class="column"><p>Item 11</p></div>
-			<div class="column"><p>Item 12</p></div>
-			<div class="column"><p>Item 13</p></div>
-			<div class="column"><p>Item 14</p></div>
-		</div>
-		<h2>10 Items</h2>
-		<div class="row row-10">
-			<div class="column"><p>Item 1</p></div>
-			<div class="column"><p>Item 2</p></div>
-			<div class="column"><p>Item 3</p></div>
-			<div class="column"><p>Item 4</p></div>
-			<div class="column"><p>Item 5</p></div>
-			<div class="column"><p>Item 6</p></div>
-			<div class="column"><p>Item 7</p></div>
-			<div class="column"><p>Item 8</p></div>
-			<div class="column"><p>Item 9</p></div>
-			<div class="column"><p>Item 10</p></div>
-			<div class="column"><p>Item 11</p></div>
-			<div class="column"><p>Item 12</p></div>
-			<div class="column"><p>Item 13</p></div>
-			<div class="column"><p>Item 14</p></div>
-		</div>
-		<h2>8 Items</h2>
-		<div class="row row-8">
 			<div class="column"><p>Item 1</p></div>
 			<div class="column"><p>Item 2</p></div>
 			<div class="column"><p>Item 3</p></div>
