@@ -1,160 +1,154 @@
-
-// Grid
-// ––––––––––––––––––––––––––––––––––––––––––––––––––
-
-// .container is main centered wrapper with a max width of 1120rem (1120px)
 .container
+	// Centered
 	margin: 0 auto
-	max-width: $container-max-width
-	padding: 0 $gutter-width
 	position: relative
+
+	// Assume the user defined width if possible, fall back to using all available space
+	max-width: $container-max-width
 	width: 100%
 
-// Using flexbox for the grid, inspired by Philip Walton:
-// http://philipwalton.github.io/solved-by-flexbox/demos/grids/
-// By default each .column within a .row will evenly take up
-// available width, and the height of each .column with take
-// up the height of the tallest .column in the same .row.
+	// Include a gutter
+	padding: 0 $gutter-width
+
 .row
-	display: flex
-	flex-direction: column
+	// No spacing, just a container
 	padding: 0
-	width: 100%
+	margin: 0 0 0 0-$gutter-width
+
+	// Display the content in rows
+	display: flex
+	flex-direction: row
 	flex-wrap: wrap
+	
+	// Fill the parent container
+	width: calc(100% + 2.0rem) // Should use gutter width
 
-	.row-no-padding
-		padding: 0
-
-		&> .column
-			padding: 0
-
-	// Vertically Align Columns
-	// .row-* vertically aligns every .col in the .row
-	.row-top
+	// Vertically align items within the row
+	&.row-top
 		align-items: flex-start
-
-	.row-bottom
+	&.row-bottom
 		align-items: flex-end
-
-	.row-center
+	&.row-center
 		align-items: center
-
-	.row-stretch
+	&.row-stretch
 		align-items: stretch
-
-	.row-baseline
+	&.row-baseline
 		align-items: baseline
 
-	.column
-		display: block
-		flex: 1
-		margin-left: 0
-		max-width: 100%
-		width: 100%
-		min-width: $container-max-width / $maximum-items-per-row
+	// Specification of the maximum number of items per row
+	@for $i from 1 through $maximum-items-per-row
+		&.row-#{$i}
+			.column
+				min-width: $container-max-width / $i
 
-		// .column-* vertically aligns an individual .column
-		.col-top
-			align-self: flex-start
+.column
+	display: block
+	flex: 1
+	margin-left: 0
+	max-width: 100%
+	width: 100%
+	min-width: $container-max-width / $maximum-items-per-row
+	margin-bottom: 1.6rem
+	padding: 0 $gutter-width
 
-		.col-bottom
-			align-self: flex-end
+	// Vertical alignment
+	.col-top
+		align-self: flex-start
+	.col-bottom
+		align-self: flex-end
+	.col-center
+		align-self: center
 
-		.col-center
-			align-self: center
+	// .column-* vertically aligns an individual .column
+	.col-top
+		align-self: flex-start
 
-		// Column Offsets
-		&.column-offset-10
-			margin-left: 10%
+	.col-bottom
+		align-self: flex-end
 
-		&.column-offset-20
-			margin-left: 20%
+	.col-center
+		align-self: center
 
-		&.column-offset-25
-			margin-left: 25%
+	// Column Offsets
+	&.column-offset-10
+		margin-left: 10%
 
-		&.column-offset-33,
-		&.column-offset-34
-			margin-left: 33.3333%
+	&.column-offset-20
+		margin-left: 20%
 
-		&.column-offset-50
-			margin-left: 50%
+	&.column-offset-25
+		margin-left: 25%
 
-		&.column-offset-66,
-		&.column-offset-67
-			margin-left: 66.6666%
+	&.column-offset-33,
+	&.column-offset-34
+		margin-left: 33.3333%
 
-		&.column-offset-75
-			margin-left: 75%
+	&.column-offset-50
+		margin-left: 50%
 
-		&.column-offset-80
-			margin-left: 80%
+	&.column-offset-66,
+	&.column-offset-67
+		margin-left: 66.6666%
 
-		&.column-offset-90
-			margin-left: 90%
+	&.column-offset-75
+		margin-left: 75%
 
-		// Explicit Column Percent Sizes
-		// By default each grid column will evenly distribute
-		// across the grid. However, you can specify individual
-		// columns to take up a certain size of the available area
-		&.column-10
-			flex: 0 0 10%
-			max-width: 10%
+	&.column-offset-80
+		margin-left: 80%
 
-		&.column-20
-			flex: 0 0 20%
-			max-width: 20%
+	&.column-offset-90
+		margin-left: 90%
 
-		&.column-25
-			flex: 0 0 25%
-			max-width: 25%
+	// Explicit Column Percent Sizes
+	// By default each grid column will evenly distribute
+	// across the grid. However, you can specify individual
+	// columns to take up a certain size of the available area
+	&.column-10
+		flex: 0 0 10%
+		max-width: 10%
 
-		&.column-33,
-		&.column-34
-			flex: 0 0 33.3333%
-			max-width: 33.3333%
+	&.column-20
+		flex: 0 0 20%
+		max-width: 20%
 
-		&.column-40
-			flex: 0 0 40%
-			max-width: 40%
+	&.column-25
+		flex: 0 0 25%
+		max-width: 25%
 
-		&.column-50
-			flex: 0 0 50%
-			max-width: 50%
+	&.column-33,
+	&.column-34
+		flex: 0 0 33.3333%
+		max-width: 33.3333%
 
-		&.column-60
-			flex: 0 0 60%
-			max-width: 60%
+	&.column-40
+		flex: 0 0 40%
+		max-width: 40%
 
-		&.column-66, &.column-67
-			flex: 0 0 66.6666%
-			max-width: 66.6666%
+	&.column-50
+		flex: 0 0 50%
+		max-width: 50%
 
-		&.column-75
-			flex: 0 0 75%
-			max-width: 75%
+	&.column-60
+		flex: 0 0 60%
+		max-width: 60%
 
-		&.column-80
-			flex: 0 0 80%
-			max-width: 80%
+	&.column-66, &.column-67
+		flex: 0 0 66.6666%
+		max-width: 66.6666%
 
-		&.column-90
-			flex: 0 0 90%
-			max-width: 90%
+	&.column-75
+		flex: 0 0 75%
+		max-width: 75%
 
-@for $i from 1 through $maximum-items-per-row
-	.row.row-#{$i}
-		.column
-			min-width: $container-max-width / $i
+	&.column-80
+		flex: 0 0 80%
+		max-width: 80%
+
+	&.column-90
+		flex: 0 0 90%
+		max-width: 90%
 
 // Larger than mobile screen
-@media (min-width: $columns-as-rows-threshold)
-
+@media (max-width: $columns-as-rows-threshold)
 	.row
-		flex-direction: row
-		margin-left: -$gutter-width
-		width: calc(100% + 2.0rem) // Should use gutter width
-
-		.column
-			margin-bottom: inherit
-			padding: 0 $gutter-width
+		flex-direction: column

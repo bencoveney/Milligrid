@@ -9,20 +9,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 
 	<link rel="stylesheet" href="../dist/MilliGrid.css">
 
 	<style>
-		.demo {
-			background-image: url('ruler.png');
-			background-position: top center;
-			background-repeat: repeat-y;
-		}
-		* {
-			margin: 0;
-			padding: 0;
-		}
+		/* Styling for the "Show Guidelines" button */
 		a.show-guidelines {
 			display: block;
 			padding: 1rem;
@@ -34,10 +26,18 @@
 			z-index: 100;
 			background-color: #fff;
 			box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+			color: #9b4dca;
 		}
+
 		a.show-guidelines:hover {
-			background-color: #000;
+			background-color: #9b4dca;
 			color: #fff;
+		}
+		/* Displays the guidelines as a background image */
+		.demo {
+			background-image: url('ruler.png');
+			background-position: top center;
+			background-repeat: repeat-y;
 		}
 	</style>
 	
@@ -45,6 +45,7 @@
 	
 	<script>
 		window.onload = function() {
+			// Show guidelines on button click
 			$(".show-guidelines").click(function() {
 				$(".container").toggleClass("demo");
 			});
@@ -56,6 +57,19 @@
 <body>
 	<a href="javascript:;" class="show-guidelines">Show Guidelines</a>
 	<div class="container">
+		<h1>Milligrid</h1>
+		<div class="row">
+			<div class="column">
+				<h2>About the Grid</h2>
+				<p>Milligrid is a responsive CSS grid system which uses flex-box as a basis for its layout. It is based on the excellent grid built into <a href="https://milligram.github.io">Milligram</a>, which was in turn based on work by <a href="http://philipwalton.github.io/solved-by-flexbox/demos/grids/">Philip Walton</a>. Milligrid aims to take the brilliant milligram grid and provide it in a standalone package with enhanced configuration options in the form of Sass variables.</p>
+			</div>
+			<div class="column">
+				<h3>Vertical Flow</h3>
+				<p>In addition to the grid system this project also bundles some small experimental text styling to help establish a vertical flow to your documents. This can be disabled by excluding the _Text.sass file from your Sass build.</p>
+				<h3>Find out more</h3>
+				<p>View Milligrid on <a href="https://github.com/bencoveney/MilliGrid">GitHub</a></p>
+			</div>
+		</div>
 		<h1>Multiple Column Tests</h1>
 		<div class="row">
 			<div class="column">
@@ -128,90 +142,90 @@
 		</div>
 		<h1>Maximum Number Of Items Per Row Tests</h1>
 		<p>Demonstrates the limiting of the number of items that are allowed to inhabit a row before wrapping occurs. If the container-width has been specified as a percentage this will be maintained as the grid grows and shrinks. If the container width has been specified as an absolute value the columns will wrap more as the screen shrinks. Numbers which divide evenly into the overall maximum number of columns (12 in this case should align correctly to the grid).</p>
-		<h2>12 Items</h2>
+		<h2>12 Items Per Row</h2>
 		<div class="row row-12">
-			<div class="column"><p>Item 1</p></div>
-			<div class="column"><p>Item 2</p></div>
-			<div class="column"><p>Item 3</p></div>
-			<div class="column"><p>Item 4</p></div>
-			<div class="column"><p>Item 5</p></div>
-			<div class="column"><p>Item 6</p></div>
-			<div class="column"><p>Item 7</p></div>
-			<div class="column"><p>Item 8</p></div>
-			<div class="column"><p>Item 9</p></div>
-			<div class="column"><p>Item 10</p></div>
-			<div class="column"><p>Item 11</p></div>
-			<div class="column"><p>Item 12</p></div>
-			<div class="column"><p>Item 13</p></div>
-			<div class="column"><p>Item 14</p></div>
+			<div class="column"><p>Item 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 5. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 6. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 7. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 8. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 9. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 10. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 11. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 12. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 13. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 14. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
 		</div>
-		<h2>6 Items</h2>
+		<h2>6 Items Per Row</h2>
 		<div class="row row-6">
-			<div class="column"><p>Item 1</p></div>
-			<div class="column"><p>Item 2</p></div>
-			<div class="column"><p>Item 3</p></div>
-			<div class="column"><p>Item 4</p></div>
-			<div class="column"><p>Item 5</p></div>
-			<div class="column"><p>Item 6</p></div>
-			<div class="column"><p>Item 7</p></div>
-			<div class="column"><p>Item 8</p></div>
-			<div class="column"><p>Item 9</p></div>
-			<div class="column"><p>Item 10</p></div>
-			<div class="column"><p>Item 11</p></div>
-			<div class="column"><p>Item 12</p></div>
-			<div class="column"><p>Item 13</p></div>
-			<div class="column"><p>Item 14</p></div>
+			<div class="column"><p>Item 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 5. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 6. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 7. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 8. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 9. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 10. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 11. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 12. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 13. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 14. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
 		</div>
-		<h2>4 Items</h2>
+		<h2>4 Items Per Row</h2>
 		<div class="row row-4">
-			<div class="column"><p>Item 1</p></div>
-			<div class="column"><p>Item 2</p></div>
-			<div class="column"><p>Item 3</p></div>
-			<div class="column"><p>Item 4</p></div>
-			<div class="column"><p>Item 5</p></div>
-			<div class="column"><p>Item 6</p></div>
-			<div class="column"><p>Item 7</p></div>
-			<div class="column"><p>Item 8</p></div>
-			<div class="column"><p>Item 9</p></div>
-			<div class="column"><p>Item 10</p></div>
-			<div class="column"><p>Item 11</p></div>
-			<div class="column"><p>Item 12</p></div>
-			<div class="column"><p>Item 13</p></div>
-			<div class="column"><p>Item 14</p></div>
+			<div class="column"><p>Item 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 5. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 6. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 7. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 8. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 9. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 10. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 11. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 12. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 13. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 14. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
 		</div>
-		<h2>3 Items</h2>
+		<h2>3 Items Per Row</h2>
 		<div class="row row-3">
-			<div class="column"><p>Item 1</p></div>
-			<div class="column"><p>Item 2</p></div>
-			<div class="column"><p>Item 3</p></div>
-			<div class="column"><p>Item 4</p></div>
-			<div class="column"><p>Item 5</p></div>
-			<div class="column"><p>Item 6</p></div>
-			<div class="column"><p>Item 7</p></div>
-			<div class="column"><p>Item 8</p></div>
-			<div class="column"><p>Item 9</p></div>
-			<div class="column"><p>Item 10</p></div>
-			<div class="column"><p>Item 11</p></div>
-			<div class="column"><p>Item 12</p></div>
-			<div class="column"><p>Item 13</p></div>
-			<div class="column"><p>Item 14</p></div>
+			<div class="column"><p>Item 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 5. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 6. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 7. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 8. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 9. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 10. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 11. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 12. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 13. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 14. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
 		</div>
-		<h2>2 Items</h2>
+		<h2>2 Items Per Row</h2>
 		<div class="row row-2">
-			<div class="column"><p>Item 1</p></div>
-			<div class="column"><p>Item 2</p></div>
-			<div class="column"><p>Item 3</p></div>
-			<div class="column"><p>Item 4</p></div>
-			<div class="column"><p>Item 5</p></div>
-			<div class="column"><p>Item 6</p></div>
-			<div class="column"><p>Item 7</p></div>
-			<div class="column"><p>Item 8</p></div>
-			<div class="column"><p>Item 9</p></div>
-			<div class="column"><p>Item 10</p></div>
-			<div class="column"><p>Item 11</p></div>
-			<div class="column"><p>Item 12</p></div>
-			<div class="column"><p>Item 13</p></div>
-			<div class="column"><p>Item 14</p></div>
+			<div class="column"><p>Item 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 5. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 6. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 7. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 8. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 9. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 10. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 11. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 12. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 13. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column"><p>Item 14. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
 		</div>
 	</div>
 </body>
