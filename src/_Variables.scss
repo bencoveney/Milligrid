@@ -1,3 +1,8 @@
+// An optional prefix to place in front of all css rules.
+// This allows for compatibility with other frameworks which share class names (i.e. Bootstrap, Milligram).
+// Example: "mg-"
+$rule-prefix: "" !default;
+
 // Grid width
 $container-max-width: 120rem !default;
 

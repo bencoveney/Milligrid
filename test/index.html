@@ -4,14 +4,14 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>MilliGrid Tests</title>
+	<title>Milligrid Tests</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 
-	<link rel="stylesheet" href="../dist/MilliGrid.css">
+	<link rel="stylesheet" href="../dist/Milligrid.css">
 
 	<style>
 		/* Styling for the "Show Guidelines" button */
@@ -28,16 +28,21 @@
 			box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 			color: #9b4dca;
 		}
-
 		a.show-guidelines:hover {
 			background-color: #9b4dca;
 			color: #fff;
 		}
+
 		/* Displays the guidelines as a background image */
 		.demo {
 			background-image: url('ruler.png');
 			background-position: top center;
 			background-repeat: repeat-y;
+		}
+		
+		/* Highlighting to enhance demos */
+		.background {
+			background-color: rgba(205,166,228,0.5);
 		}
 	</style>
 	
@@ -67,7 +72,7 @@
 				<h3>Vertical Flow</h3>
 				<p>In addition to the grid system this project also bundles some small experimental text styling to help establish a vertical flow to your documents. This can be disabled by excluding the _Text.sass file from your Sass build.</p>
 				<h3>Find out more</h3>
-				<p>View Milligrid on <a href="https://github.com/bencoveney/MilliGrid">GitHub</a></p>
+				<p>View Milligrid on <a href="https://github.com/bencoveney/Milligrid">GitHub</a></p>
 			</div>
 		</div>
 		<h1>Multiple Column Tests</h1>
@@ -173,8 +178,6 @@
 			<div class="column"><p>Item 10. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
 			<div class="column"><p>Item 11. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
 			<div class="column"><p>Item 12. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 13. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 14. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
 		</div>
 		<h2>4 Items Per Row</h2>
 		<div class="row row-4">
@@ -186,12 +189,6 @@
 			<div class="column"><p>Item 6. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
 			<div class="column"><p>Item 7. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
 			<div class="column"><p>Item 8. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 9. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 10. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 11. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 12. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 13. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 14. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
 		</div>
 		<h2>3 Items Per Row</h2>
 		<div class="row row-3">
@@ -201,14 +198,6 @@
 			<div class="column"><p>Item 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
 			<div class="column"><p>Item 5. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
 			<div class="column"><p>Item 6. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 7. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 8. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 9. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 10. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 11. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 12. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 13. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 14. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
 		</div>
 		<h2>2 Items Per Row</h2>
 		<div class="row row-2">
@@ -216,65 +205,43 @@
 			<div class="column"><p>Item 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
 			<div class="column"><p>Item 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
 			<div class="column"><p>Item 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 5. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 6. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 7. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 8. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 9. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 10. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 11. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 12. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 13. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 14. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
 		</div>
 		<h1>Offsets and column widths</h1>
 		<div class="row">
-			<div class="column column-wide-1"><p>Double-wide. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Full width, 0 offset. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus. Ut id luctus nunc. Nullam lorem risus, sodales eu ipsum ac, consectetur consequat nisi. Nullam id mauris nisl. Ut quis viverra ipsum. Maecenas vel maximus nisi. Donec pulvinar justo in dui blandit tempus. Etiam luctus tortor ac leo dignissim, iaculis facilisis metus semper.</p></div>
+			<div class="column column-wide-1 column-offset-11 background"><p>1x width, 11x offset.</p></div>
 		</div>
 		<div class="row">
-			<div class="column column-wide-2"><p>Double-wide. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Full width, 0 offset. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus. Ut id luctus nunc. Nullam lorem risus, sodales eu ipsum ac, consectetur consequat nisi. Nullam id mauris nisl. Ut quis viverra ipsum. Maecenas vel maximus nisi. Donec pulvinar justo in dui blandit tempus. Etiam luctus tortor ac leo dignissim, iaculis facilisis metus semper.</p></div>
+			<div class="column column-wide-2 column-offset-10 background"><p>2x width, 10x offset.</p></div>
 		</div>
 		<div class="row">
-			<div class="column column-wide-3"><p>Double-wide. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Full width, 0 offset. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus. Ut id luctus nunc. Nullam lorem risus, sodales eu ipsum ac, consectetur consequat nisi. Nullam id mauris nisl. Ut quis viverra ipsum. Maecenas vel maximus nisi. Donec pulvinar justo in dui blandit tempus. Etiam luctus tortor ac leo dignissim, iaculis facilisis metus semper.</p></div>
+			<div class="column column-wide-3 column-offset-9 background"><p>3x width, 9x offset.</p></div>
 		</div>
 		<div class="row">
-			<div class="column column-wide-4"><p>Double-wide. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Full width, 0 offset. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus. Ut id luctus nunc. Nullam lorem risus, sodales eu ipsum ac, consectetur consequat nisi. Nullam id mauris nisl. Ut quis viverra ipsum. Maecenas vel maximus nisi. Donec pulvinar justo in dui blandit tempus. Etiam luctus tortor ac leo dignissim, iaculis facilisis metus semper.</p></div>
+			<div class="column column-wide-4 column-offset-8 background"><p>4x width, 8x offset.</p></div>
 		</div>
 		<div class="row">
-			<div class="column column-wide-5"><p>Double-wide. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Full width, 0 offset. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus. Ut id luctus nunc. Nullam lorem risus, sodales eu ipsum ac, consectetur consequat nisi. Nullam id mauris nisl. Ut quis viverra ipsum. Maecenas vel maximus nisi. Donec pulvinar justo in dui blandit tempus. Etiam luctus tortor ac leo dignissim, iaculis facilisis metus semper.</p></div>
+			<div class="column column-wide-5 column-offset-7 background"><p>5x width, 7x offset.</p></div>
 		</div>
 		<div class="row">
-			<div class="column column-wide-6"><p>Double-wide. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Full width, 0 offset. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus. Ut id luctus nunc. Nullam lorem risus, sodales eu ipsum ac, consectetur consequat nisi. Nullam id mauris nisl. Ut quis viverra ipsum. Maecenas vel maximus nisi. Donec pulvinar justo in dui blandit tempus. Etiam luctus tortor ac leo dignissim, iaculis facilisis metus semper.</p></div>
+			<div class="column column-wide-6 column-offset-6 background"><p>6x width, 6x offset.</p></div>
 		</div>
 		<div class="row">
-			<div class="column column-wide-7"><p>Double-wide. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Full width, 0 offset. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus. Ut id luctus nunc. Nullam lorem risus, sodales eu ipsum ac, consectetur consequat nisi. Nullam id mauris nisl. Ut quis viverra ipsum. Maecenas vel maximus nisi. Donec pulvinar justo in dui blandit tempus. Etiam luctus tortor ac leo dignissim, iaculis facilisis metus semper.</p></div>
+			<div class="column column-wide-7 column-offset-5 background"><p>7x width, 5x offset.</p></div>
 		</div>
 		<div class="row">
-			<div class="column column-wide-8"><p>Double-wide. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Full width, 0 offset. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus. Ut id luctus nunc. Nullam lorem risus, sodales eu ipsum ac, consectetur consequat nisi. Nullam id mauris nisl. Ut quis viverra ipsum. Maecenas vel maximus nisi. Donec pulvinar justo in dui blandit tempus. Etiam luctus tortor ac leo dignissim, iaculis facilisis metus semper.</p></div>
+			<div class="column column-wide-8 column-offset-4 background"><p>8x width, 4x offset.</p></div>
 		</div>
 		<div class="row">
-			<div class="column column-wide-9"><p>Double-wide. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Full width, 0 offset. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus. Ut id luctus nunc. Nullam lorem risus, sodales eu ipsum ac, consectetur consequat nisi. Nullam id mauris nisl. Ut quis viverra ipsum. Maecenas vel maximus nisi. Donec pulvinar justo in dui blandit tempus. Etiam luctus tortor ac leo dignissim, iaculis facilisis metus semper.</p></div>
+			<div class="column column-wide-9 column-offset-3 background"><p>9x width, 3x offset.</p></div>
 		</div>
 		<div class="row">
-			<div class="column column-wide-10"><p>Double-wide. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Full width, 0 offset. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus. Ut id luctus nunc. Nullam lorem risus, sodales eu ipsum ac, consectetur consequat nisi. Nullam id mauris nisl. Ut quis viverra ipsum. Maecenas vel maximus nisi. Donec pulvinar justo in dui blandit tempus. Etiam luctus tortor ac leo dignissim, iaculis facilisis metus semper.</p></div>
+			<div class="column column-wide-10 column-offset-2 background"><p>10x width, 2x offset.</p></div>
 		</div>
 		<div class="row">
-			<div class="column column-wide-12"><p>Double-wide. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Full width, 0 offset. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus. Ut id luctus nunc. Nullam lorem risus, sodales eu ipsum ac, consectetur consequat nisi. Nullam id mauris nisl. Ut quis viverra ipsum. Maecenas vel maximus nisi. Donec pulvinar justo in dui blandit tempus. Etiam luctus tortor ac leo dignissim, iaculis facilisis metus semper.</p></div>
+			<div class="column column-wide-11 column-offset-1 background"><p>11x width, 1x offset.</p></div>
 		</div>
 		<div class="row">
-			<div class="column column-wide-12"><p>Double-wide. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Full width, 0 offset. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus. Ut id luctus nunc. Nullam lorem risus, sodales eu ipsum ac, consectetur consequat nisi. Nullam id mauris nisl. Ut quis viverra ipsum. Maecenas vel maximus nisi. Donec pulvinar justo in dui blandit tempus. Etiam luctus tortor ac leo dignissim, iaculis facilisis metus semper.</p></div>
+			<div class="column column-wide-12 background"><p>12x width.</p></div>
 		</div>
 	</div>
 </body>

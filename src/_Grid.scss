@@ -1,51 +1,57 @@
-.container {
+.#{$rule-prefix}container {
 	// Centered
 	margin: 0 auto;
 	position: relative;
+
 	// Assume the user defined width if possible, fall back to using all available space
 	max-width: $container-max-width;
 	width: 100%;
+
 	// Include a gutter
 	padding: 0 $gutter-width;
 }
 
-.row {
+.#{$rule-prefix}row {
 	// No spacing, just a container
 	padding: 0;
 	margin: 0 0 0 0 - $gutter-width;
+
 	// Display the content in rows
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+
 	// Fill the parent container
 	width: calc(100% + 2.0rem);
+
 	// Vertically align items within the row
-	&.row-top {
+	&.#{$rule-prefix}row-top {
 		align-items: flex-start;
 	}
-	&.row-bottom {
+	&.#{$rule-prefix}row-bottom {
 		align-items: flex-end;
 	}
-	&.row-center {
+	&.#{$rule-prefix}row-center {
 		align-items: center;
 	}
-	&.row-stretch {
+	&.#{$rule-prefix}row-stretch {
 		align-items: stretch;
 	}
-	&.row-baseline {
+	&.#{$rule-prefix}row-baseline {
 		align-items: baseline;
 	}
+
 	// Specification of the maximum number of items per row
 	@for $i from 1 through $maximum-items-per-row {
-		&.row-#{$i} {
-			.column {
-				min-width: $container-max-width / $i;
+		&.#{$rule-prefix}row-#{$i} {
+			.#{$rule-prefix}column {
+				min-width: percentage(1 / $i);
 			}
 		}
 	}
 }
 
-.column {
+.#{$rule-prefix}column {
 	display: block;
 	flex: 1;
 	margin-left: 0;
@@ -54,33 +60,25 @@
 	min-width: $container-max-width / $maximum-items-per-row;
 	margin-bottom: 1.6rem;
 	padding: 0 $gutter-width;
+
 	// Vertical alignment
-	.col-top {
+	.#{$rule-prefix}column-top {
 		align-self: flex-start;
 	}
-	.col-bottom {
+	.#{$rule-prefix}column-bottom {
 		align-self: flex-end;
 	}
-	.col-center {
+	.#{$rule-prefix}column-center {
 		align-self: center;
 	}
-	// .column-* vertically aligns an individual .column
-	.col-top {
-		align-self: flex-start;
-	}
-	.col-bottom {
-		align-self: flex-end;
-	}
-	.col-center {
-		align-self: center;
-	}
+
 	@for $i from 1 through $maximum-items-per-row {
-		$percent: percentage(1 / $maximum-items-per-row * $i);
-		&.column-wide-#{$i} {
+		$percent: percentage((1 / $maximum-items-per-row) * $i);
+		&.#{$rule-prefix}column-wide-#{$i} {
 			flex: 0 0 $percent;
 			max-width: $percent;
 		}
-		&.column-offset-#{$i} {
+		&.#{$rule-prefix}column-offset-#{$i} {
 			margin-left: $percent;
 		}
 	}
@@ -88,7 +86,7 @@
 
 // Larger than mobile screen
 @media (max-width: $columns-as-rows-threshold) {
-	.row {
+	.#{$rule-prefix}row {
 		flex-direction: column;
 	}
 }
