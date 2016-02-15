@@ -1,26 +1,26 @@
 // Grid width
-$container-max-width: 120.0rem !default
+$container-max-width: 120rem !default;
 
 // Size of the gutter between columns
-$gutter-width: 1.0rem !default
+$gutter-width: 1rem !default;
 
 // Spacing between elements vertically above and below
-$gutter-width-vertical: 1.6rem !default
+$gutter-width-vertical: 1.6rem !default;
 
 // Maximum number of items that will be displayed on a grid row
 // This applies to top-level grids.
 // Nested grids will have a reduced number of items per row.
 // This assumes the container has reached it's max-width.
 // If the container is thinner that it's max-width then there will be less items per row.
-$maximum-items-per-row: 12 !default
+$maximum-items-per-row: 12 !default;
 
 // The point in the screen's width at which all columns will become rows themselves.
-$columns-as-rows-threshold: 40.0rem !default
+$columns-as-rows-threshold: 40rem !default;
 
 // The color for standard body text
-$text-color: #111111 !default
+$text-color: #111111 !default;
 
-$shaded-background-color: #eeeeee !default
+$shaded-background-color: #eeeeee !default;
 
 // The color for visual flair
-$highlight-color: #9b4dca !default
+$highlight-color: #9b4dca !default;
