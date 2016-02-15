@@ -1,18 +1,9 @@
 module.exports = function ( grunt ) {
-
 	'use strict';
-
-
-	// ================================================================
-	// CONFIG TASKS
-	// ================================================================
 
 	// Define the configuration
 	grunt.initConfig({
-
-		// DEFAULT TASK
-		// ================================================================
-
+	
 		// Watch files and process the above tasks
 		watch: {
 			options: {
@@ -28,7 +19,7 @@ module.exports = function ( grunt ) {
 			},
 			sass: {
 				files: [
-					'src/**/*.sass'
+					'src/**/*.scss'
 				],
 				tasks: [
 					'sass',
@@ -36,15 +27,12 @@ module.exports = function ( grunt ) {
 				]
 			}
 		},
-
-		// BUILD TASKS
-		// ================================================================
-
+		
 		// Clear files and folders
 		clean: {
 			all: [ 'dist' ]
 		},
-
+		
 		// Compile Sass files to CSS
 		sass: {
 			options: {
@@ -53,7 +41,7 @@ module.exports = function ( grunt ) {
 			},
 			dev: {
 				files: {
-					'dist/MilliGrid.css': 'src/**/*.sass'
+					'dist/Milligrid.css': 'src/**/Milligrid.scss',
 				}
 			},
 		},
@@ -72,13 +60,7 @@ module.exports = function ( grunt ) {
 				}
 			}
 		}
-
 	});
-
-
-	// ================================================================
-	// REGISTER TASKS
-	// ================================================================
 
 	// Default task
 	grunt.registerTask( 'default', [
@@ -93,16 +75,9 @@ module.exports = function ( grunt ) {
 		'autoprefixer'
 	]);
 
-
-	// ================================================================
-	// LOAD TASKS
-	// ================================================================
-
 	// Automatically loading Grunt tasks
 	require( 'load-grunt-tasks' )( grunt );
 
 	// Display the elapsed execution time of Grunt tasks
 	require( 'time-grunt' )( grunt );
-
-
 };

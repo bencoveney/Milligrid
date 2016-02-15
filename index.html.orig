@@ -11,7 +11,11 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 
-	<link rel="stylesheet" href="dist/Milligrid.css">
+<<<<<<< HEAD:index.html
+	<link rel="stylesheet" href="dist/MilliGrid.css">
+=======
+	<link rel="stylesheet" href="../dist/Milligrid.css">
+>>>>>>> 66d65b17a9031db8ec8d0cb8727e8190c11c0fcf:test/index.html
 
 	<style>
 		/* Styling for the "Show Guidelines" button */
