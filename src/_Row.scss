@@ -1,0 +1,44 @@
+.#{$rule-prefix}row {
+	// No spacing, just a container
+	padding: 0;
+	margin: 0 0 0 0 - $gutter-width;
+
+	// Display the content in rows
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	// Fill the parent container
+	width: calc(100% + 2.0rem);
+
+	// Larger than mobile screen
+	@media (max-width: $columns-as-rows-threshold) {
+		flex-direction: column;
+	}
+
+	// Vertically align items within the row
+	&.#{$rule-prefix}row-top {
+		align-items: flex-start;
+	}
+	&.#{$rule-prefix}row-bottom {
+		align-items: flex-end;
+	}
+	&.#{$rule-prefix}row-center {
+		align-items: center;
+	}
+	&.#{$rule-prefix}row-stretch {
+		align-items: stretch;
+	}
+	&.#{$rule-prefix}row-baseline {
+		align-items: baseline;
+	}
+
+	// Specification of the maximum number of items per row
+	@for $i from 1 through $maximum-items-per-row {
+		&.#{$rule-prefix}row-#{$i} {
+			.#{$rule-prefix}column {
+				min-width: percentage(1 / $i);
+			}
+		}
+	}
+}
