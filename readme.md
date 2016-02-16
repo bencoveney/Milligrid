@@ -4,7 +4,6 @@ Milligrid is a CSS grid system build using flexbox and Sass. You can view it in 
 
 ## To do list:
 
-+ Create mixin variants of grid selectors to allow third party usage without CSS selector spam.
 + Fix text being too small.
 + Additional text element styles.
 + Configure the build to create a grid only and full variant.
