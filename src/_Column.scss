@@ -1,4 +1,4 @@
-// Base column specification.
+// Base column rules.
 @mixin column {
 	display: block;
 	flex: 1;
@@ -30,7 +30,7 @@
 	margin-left: $percent;
 }
 
-// Construction of the static types.
+// Construction of the static column rules.
 .#{$rule-prefix}column {
 	@include column;
 

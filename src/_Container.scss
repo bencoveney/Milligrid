@@ -1,4 +1,5 @@
-.#{$rule-prefix}container {
+// Base container rules.
+@mixin container {
 	// Centered
 	margin: 0 auto;
 	position: relative;
@@ -9,4 +10,9 @@
 
 	// Include a gutter
 	padding: 0 $gutter-width;
+}
+
+// Construction of the static container rules.
+.#{$rule-prefix}container {
+	@include container;
 }
