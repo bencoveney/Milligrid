@@ -6,7 +6,7 @@
 	max-width: 100%;
 	width: 100%;
 	min-width: $container-max-width / $maximum-items-per-row;
-	margin-bottom: 1.6rem;
+	margin-bottom: $gutter-width-vertical;
 	padding: 0 $gutter-width;
 }
 
