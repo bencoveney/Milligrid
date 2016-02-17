@@ -67,3 +67,35 @@ h6 {
 	margin-top: 1.3rem;
 	font-size: 1.4rem;
 }
+
+@mixin code-font {
+	font-family: 'Roboto Mono', Consolas, Courier New, Courier, monospace;
+	background-color: $text-color;
+	color: $shaded-background-color;
+}
+
+/* Inline code */
+code {
+	@include code-font;
+	
+	font-size: 1.3rem;
+	padding: 0 0.2rem;
+	border-radius: 0.3rem;
+}
+
+/* Multi-line code */
+pre{
+	@include code-font;
+	
+	display: block;
+	border-radius: 1rem;
+	
+	code {
+		@include code-font;
+		
+		font-size: 1.5rem;
+		display: block;
+		padding: 2.4rem;
+		border-radius: 1rem;
+	}
+}
