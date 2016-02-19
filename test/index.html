@@ -12,7 +12,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Mono' rel='stylesheet' type='text/css'>
 
-	<link rel="stylesheet" href="../dist/Milligrid.css">
+	<link rel="stylesheet" href="../dist/MilligridExtended.css">
 
 	<style>
 		/* Styling for the "Show Guidelines" button */
@@ -182,22 +182,30 @@
 		<h1>Nested Column Tests</h1>
 		<div class="row">
 			<div class="column">
-				<h2>Non-nested Column</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus. Ut id luctus nunc. Nullam lorem risus, sodales eu ipsum ac, consectetur consequat nisi. Nullam id mauris nisl. Ut quis viverra ipsum. Maecenas vel maximus nisi. Donec pulvinar justo in dui blandit tempus. Etiam luctus tortor ac leo dignissim, iaculis facilisis metus semper.</p>
-				<h4>Non-nested Column</h4>
-				<p>Proin feugiat tristique nibh vitae eleifend. Etiam vitae enim at turpis congue vestibulum nec nec ante. Aliquam semper consectetur dui, at pulvinar mi consectetur vel. Pellentesque ut nibh sed ex malesuada tempor. Nullam ultricies, felis non vestibulum cursus, lorem lectus sollicitudin eros, nec condimentum leo urna ut sapien. Vivamus facilisis augue risus, vitae rhoncus velit dignissim id. Nulla lacinia lacus id vehicula suscipit. Pellentesque venenatis, libero nec feugiat eleifend, turpis felis finibus augue, sed venenatis augue felis sit amet leo. Donec lacinia cursus nulla ut congue. In ex purus, facilisis id diam et, aliquam rutrum nibh. Aliquam erat volutpat. Praesent mattis ornare porta. Nullam sit amet turpis et ipsum tempus fermentum.</p>
+				<p>Grids can be nested by placing a <code>.row</code> element inside of a <code>.column</code> element. The nested grid does not require it's own <code>.container</code> element.
 			</div>
+		</div>
+		<div class="row">
 			<div class="column">
-				<div class="row">
-					<div class="column">
-						<h3>Nested Column</h3>
-						<p>Donec rhoncus dignissim gravida. Cras nec mauris eget dolor lobortis imperdiet vitae vitae arcu. Vestibulum nec dictum purus. Suspendisse facilisis faucibus arcu, in maximus felis vestibulum eu. Mauris auctor turpis eget rhoncus vestibulum. Maecenas faucibus est id euismod fermentum. Mauris ut bibendum mauris. Suspendisse tortor augue, mollis sed eros sit amet, tempor finibus est. Aenean aliquam nunc vitae ante bibendum fermentum. Cras tincidunt ut nunc quis lobortis. Morbi malesuada lobortis efficitur. Nam consequat nibh consequat, vestibulum ipsum id, mattis dolor. Fusce faucibus gravida leo. Mauris aliquet condimentum quam, ut finibus massa consequat et.</p>
-					</div>
-					<div class="column">
-						<h3>Nested Column</h3>
-						<p>Nullam accumsan quam nec tortor vestibulum aliquam. Suspendisse at nisl imperdiet, mollis libero quis, posuere orci. Integer turpis urna, sagittis sed tortor eu, consectetur dictum ex. Sed egestas velit auctor velit tincidunt, in ultricies ante commodo. Integer vel diam sollicitudin, euismod ante in, dictum nulla. Sed a mi at erat consequat condimentum ac ut est. Maecenas rhoncus, ipsum non ultricies interdum, ligula felis eleifend orci, sed fringilla lectus lorem fringilla lectus. Quisque placerat efficitur quam eget dictum. Duis non nunc eu mauris ornare placerat. Phasellus sit amet gravida tortor. Donec lorem arcu, consequat eu felis a, blandit dictum ex.</p>
-					</div>
-				</div>
+				<pre><code>&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;column&quot;&gt;
+            &lt;p&gt;Column in parent.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;column&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;column&quot;&gt;
+                    &lt;p&gt;Column in child.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;column&quot;&gt;
+                    &lt;p&gt;Column in child.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
 			</div>
 		</div>
 		<h1>Maximum Number Of Items Per Row Tests</h1>
