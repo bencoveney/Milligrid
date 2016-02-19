@@ -44,13 +44,17 @@
 		@include column-center;
 	}
 
-	@for $i from 1 through $maximum-items-per-row {
-		$percent: percentage((1 / $maximum-items-per-row) * $i);
-		&.#{$rule-prefix}column-wide-#{$i} {
-			@include column-wide($percent);
-		}
-		&.#{$rule-prefix}column-offset-#{$i} {
-			@include column-offset($percent);
+
+	// Larger than mobile screen
+	@media (min-width: $columns-as-rows-threshold) {
+		@for $i from 1 through $maximum-items-per-row {
+			$percent: percentage((1 / $maximum-items-per-row) * $i);
+			&.#{$rule-prefix}column-wide-#{$i} {
+				@include column-wide($percent);
+			}
+			&.#{$rule-prefix}column-offset-#{$i} {
+				@include column-offset($percent);
+			}
 		}
 	}
 }

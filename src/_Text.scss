@@ -35,12 +35,17 @@ a:hover {
 
 h1 {
 	font-size: 3rem;
-	font-family: "Poiret One", cursive;
+	font-family: 'Lobster', cursive;
 	font-weight: 400;
 	background-color: $shaded-background-color;
 	border-bottom: 0.1rem solid $highlight-color;
 	margin: 2.4rem 0 - $gutter-width 2.3rem 0 - $gutter-width;
 	padding: 0 $gutter-width;
+}
+
+h2, h3, h4, h5, h6 {
+	display: inline-block; // Prevent margins collapsing.
+	min-width: 100%;
 }
 
 h2 {
@@ -74,6 +79,10 @@ h6 {
 	color: $shaded-background-color;
 }
 
+ul {
+	margin-left: $gutter-width * 3
+}
+
 /* Inline code */
 code {
 	@include code-font;
@@ -89,6 +98,8 @@ pre{
 	
 	display: block;
 	border-radius: 1rem;
+	margin-left: -$gutter-width;
+	margin-right: -$gutter-width;
 	
 	code {
 		@include code-font;
