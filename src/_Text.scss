@@ -12,6 +12,7 @@ body {
 	color: $text-color;
 }
 
+// Reset options
 *,
 *:after,
 *:before {
@@ -25,14 +26,15 @@ body {
 	line-height: 1.6;
 }
 
+// Link styling
 a:link, a:visited, a:hover, a:active {
 	color: $highlight-color;
 }
-
 a:hover {
 	text-decoration: none;
 }
 
+// Header styling
 h1 {
 	font-size: 3rem;
 	font-family: 'Lobster', cursive;
@@ -42,50 +44,44 @@ h1 {
 	margin: 2.4rem 0 - $gutter-width 2.3rem 0 - $gutter-width;
 	padding: 0 $gutter-width;
 }
-
 h2, h3, h4, h5, h6 {
 	display: inline-block; // Prevent margins collapsing.
 	min-width: 100%;
 }
-
 h2 {
 	margin-top: 1.3rem;
 	font-size: 2.2rem;
 }
-
 h3 {
 	margin-top: 1.6rem;
 	font-size: 2rem;
 }
-
 h4 {
 	margin-top: 2rem;
 	font-size: 1.8rem;
 }
-
 h5 {
 	margin-top: 2.3rem;
 	font-size: 1.6rem;
 }
-
 h6 {
 	margin-top: 1.3rem;
 	font-size: 1.4rem;
 }
 
-@mixin code-font {
-	font-family: 'Roboto Mono', Consolas, Courier New, Courier, monospace;
-	background-color: $text-color;
-	color: $shaded-background-color;
-}
-
+// List styling
 ul {
 	margin-top: 1.2rem;
 	margin-bottom: 1.2rem;
 	margin-left: $gutter-width * 3
 }
 
-/* Inline code */
+// Code styling, both inline and multi-line
+@mixin code-font {
+	font-family: 'Roboto Mono', Consolas, Courier New, Courier, monospace;
+	background-color: $text-color;
+	color: $shaded-background-color;
+}
 code {
 	@include code-font;
 	
@@ -93,8 +89,6 @@ code {
 	padding: 0 0.2rem;
 	border-radius: 0.3rem;
 }
-
-/* Multi-line code */
 pre{
 	@include code-font;
 	
