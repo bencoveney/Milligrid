@@ -6,5 +6,4 @@ Milligrid is a CSS grid system build using flexbox and Sass. You can view it in 
 
 + Additional text element styles.
 + Configurable vertical flow.
-+ Documentation
 + Publish of package to bower (and other) platforms.

@@ -12,13 +12,19 @@
 
 // Vertical alignment options.
 @mixin column-top {
-		align-self: flex-start;
+	align-self: flex-start;
 }
 @mixin column-bottom {
-		align-self: flex-end;
+	align-self: flex-end;
 }
 @mixin column-center {
-		align-self: center;
+	align-self: center;
+}
+@mixin column-stretch {
+	align-self: stretch;
+}
+@mixin column-baseline {
+	align-self: baseline;
 }
 
 // Specific widths/offsets.
@@ -34,16 +40,21 @@
 .#{$rule-prefix}column {
 	@include column;
 
-	.#{$rule-prefix}column-top {
+	&.#{$rule-prefix}column-top {
 		@include column-top;
 	}
-	.#{$rule-prefix}column-bottom {
+	&.#{$rule-prefix}column-bottom {
 		@include column-bottom;
 	}
-	.#{$rule-prefix}column-center {
+	&.#{$rule-prefix}column-center {
 		@include column-center;
 	}
-
+	&.#{$rule-prefix}column-stretch {
+		@include column-stretch;
+	}
+	&.#{$rule-prefix}column-baseline {
+		@include column-baseline;
+	}
 
 	// Larger than mobile screen
 	@media (min-width: $columns-as-rows-threshold) {

@@ -117,6 +117,7 @@
 					<li><a href="#nesting">Nested Grids</a></li>
 					<li><a href="#limits">Row Item Limits</a></li>
 					<li><a href="#widths">Offsets and Column Widths</a></li>
+					<li><a href="#vertical">Vertical Alignment</a></li>
 					<li><a href="#sass">Sass Configuration</a></li>
 					<li><a href="#extended">Milligrid Extended</a></li>
 				</ul>
@@ -221,48 +222,32 @@
 			<div class="column">
 				<pre><code>&lt;div class=&quot;<span class="highlight">row row-3</span>&quot;&gt;
     &lt;div class=&quot;<span class="highlight">column</span>&quot;&gt;
-        &lt;p&gt;
-            1st item on the row.
-        &lt;/p&gt;
+        &lt;p&gt;1st item on the row.&lt;/p&gt;
     &lt;/div&gt;
     &lt;div class=&quot;<span class="highlight">column</span>&quot;&gt;
-        &lt;p&gt;
-            2nd item on the row.
-        &lt;/p&gt;
+        &lt;p&gt;2nd item on the row.&lt;/p&gt;
     &lt;/div&gt;
     &lt;div class=&quot;<span class="highlight">column</span>&quot;&gt;
-        &lt;p&gt;
-            3rd item on the row.
-        &lt;/p&gt;
+        &lt;p&gt;3rd item on the row.&lt;/p&gt;
     &lt;/div&gt;
     &lt;div class=&quot;<span class="highlight">column</span>&quot;&gt;
-        &lt;p&gt;
-            4th item will wrap to the next line.
-        &lt;/p&gt;
+        &lt;p&gt;4th item will wrap to the next line.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 			</div>
 		</div>
 		<div class="row row-3 sample">
 			<div class="column">
-				<p>
-					1st item on the row.
-				</p>
+				<p>1st item on the row.</p>
 			</div>
 			<div class="column">
-				<p>
-					2nd item on the row.
-				</p>
+				<p>2nd item on the row.</p>
 			</div>
 			<div class="column">
-				<p>
-					3rd item on the row.
-				</p>
+				<p>3rd item on the row.</p>
 			</div>
 			<div class="column">
-				<p>
-					4th item will wrap to the next line.
-				</p>
+				<p>4th item will wrap to the next line.</p>
 			</div>
 		</div>
 		<h1><a name="widths"></a>Offsets and Column Widths</h1>
@@ -280,14 +265,10 @@
 			<div class="column">
 				<pre><code>&lt;div class=&quot;<span class="highlight">row</span>&quot;&gt;
     &lt;div class=&quot;<span class="highlight">column column-wide-4</span>&quot;&gt;
-        &lt;p&gt;
-            0x offset, 4x width.
-        &lt;/p&gt;
+        &lt;p&gt;0x offset, 4x width.&lt;/p&gt;
     &lt;/div&gt;
     &lt;div class=&quot;<span class="highlight">column column-offset-2 column-wide-6</span>&quot;&gt;
-        &lt;p&gt;
-            2x offset, 6x width.
-        &lt;/p&gt;
+        &lt;p&gt;2x offset, 6x width.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -295,14 +276,61 @@
 		</div>
 		<div class="row sample">
 			<div class="column column-wide-4">
-				<p>
-					0x offset, 4x width.
-				</p>
+				<p>0x offset, 4x width.</p>
 			</div>
 			<div class="column column-offset-2 column-wide-6">
-				<p>
-					2x offset, 6x width.
-				</p>
+				<p>2x offset, 6x width.</p>
+			</div>
+		</div>
+		<h1><a name="vertical"></a>Vertical Alignment</h1>
+		<div class="row">
+			<div class="column">
+				<h3>Row Configuration</h3>
+				<p>5 options are provided for the configuration of how a <code>.row</code> element handles the vertical alignment of the items within it:</p>
+				<ul>
+					<li><code>.row-top</code> - Items are aligned to the top of the row.</li>
+					<li><code>.row-bottom</code> - Items are aligned to the bottom of the row.</li>
+					<li><code>.row-center</code> - Items are vertically centered on the row.</li>
+					<li><code>.row-stretch</code> - Items are stretched to fill the row.</li>
+					<li><code>.row-baseline</code> - The baseline of each item's text will be the same for all items.</li>
+				</ul>
+			</div>
+			<div class="column">
+				<h3>Column Configuration</h3>
+				<p>Configuration for individual <code>.column</code> elements is available that can be applied in cases where fine-tuned control of vertical positioning is required:</p>
+				<ul>
+					<li><code>.column-top</code> - Element is aligned to the top of the row.</li>
+					<li><code>.column-bottom</code> - Element is aligned to the bottom of the row.</li>
+					<li><code>.column-center</code> - Element is vertically centered on the row.</li>
+					<li><code>.column-stretch</code> - Element is stretched to fill the row.</li>
+					<li><code>.column-baseline</code> - The baseline of the text in the element will be aligned to other element's text baseline.</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="column">
+				<pre><code>&lt;div class=&quot;<span class="highlight">row row-bottom</span>&quot;&gt;
+    &lt;div class=&quot;<span class="highlight">column</span>&quot;&gt;
+        &lt;p&gt;Column with very long content that takes up lots of vertical space. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis molestie libero, vel tincidunt diam tristique a.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;<span class="highlight">column</span>&quot;&gt;
+        &lt;p&gt;Short column will be on the bottom of the row.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;<span class="highlight">column column-center</span>&quot;&gt;
+        &lt;p&gt;Short column will be centered.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+			</div>
+		</div>
+		<div class="row row-bottom sample">
+			<div class="column">
+				<p>Column with very long content that takes up lots of vertical space. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis molestie libero, vel tincidunt diam tristique a.</p>
+			</div>
+			<div class="column">
+				<p>Short column will be on the bottom of the row.</p>
+			</div>
+			<div class="column column-center">
+				<p>Short column will be centered.</p>
 			</div>
 		</div>
 		<h1><a name="sass"></a>Sass Configuration</h1>
@@ -341,9 +369,9 @@
 		</div>
 		<div class="row">
 			<div class="column">
-				<h3>ContainerMixins</h3>
+				<h3>Container Mixins</h3>
 				<ul class="monospace">
-					<li>Container</li>
+					<li>container</li>
 				</ul>
 			</div>
 			<div class="column">
