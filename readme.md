@@ -1,6 +1,6 @@
 # Milligrid:
 
-[![GitHub version](https://badge.fury.io/gh/bencoveney%2Fmilligrid.png)](https://badge.fury.io/gh/bencoveney%2Fmilligrid)[![Bower version](https://badge.fury.io/bo/milligram.png)](https://badge.fury.io/bo/milligram)
+[![GitHub version](https://badge.fury.io/gh/bencoveney%2Fmilligrid.png)](https://badge.fury.io/gh/bencoveney%2Fmilligrid)[![Bower version](https://badge.fury.io/bo/milligrid.png)](https://badge.fury.io/bo/milligrid)
 
 Milligrid is a responsive CSS grid system which uses flexbox as a basis for its layout. It is based on the excellent grid built into [Milligram](https://milligram.github.io), which was in turn based on work by [Philip Walton](http://philipwalton.github.io/solved-by-flexbox/demos/grids/). Milligrid aims to take the brilliant Milligram grid and provide it in a standalone package with enhanced configuration options in the form of Sass variables.
 
