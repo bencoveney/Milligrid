@@ -4,6 +4,12 @@ Milligrid is a responsive CSS grid system which uses flexbox as a basis for its 
 
 [Complete documentation](http://bencoveney.github.io/Milligrid/) is available for information on how best to utilise the grid system.
 
+## Get Milligrid
+
+You can either [download Milligrid](https://github.com/bencoveney/Milligrid/releases) directly or install it via bower:
+
+```bower install milligrid```
+
 ## Versions
 
 ### Milligrid.css
