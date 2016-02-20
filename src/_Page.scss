@@ -1,5 +1,7 @@
+// Wrapper element for a container.
+// Gives large header styling.
 .header {
-	background-color: #9b4dca;/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9b4dca+0,7db9e8+100 */
+	background-color: #9b4dca;
 	background: linear-gradient(to bottom, #9b4dca 0%,#793d9e 100%);
 	color: white;
 	padding: 9.6rem 0;
@@ -16,6 +18,8 @@
 	}
 }
 
+// Wrapper element for a container.
+// Gives full width muted footer styling.
 .footer {
 	background-color: #eeeeee;
 	color: #777777;

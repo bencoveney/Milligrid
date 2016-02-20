@@ -1,7 +1,7 @@
 {
   "name": "milligrid",
   "description": "A flexbox CSS grid framework",
-  "homepage": "https://github.com/bencoveney/milligram",
+  "homepage": "https://github.com/bencoveney/milligrid",
   "license": "MIT",
   "authors": [
     "Ben Coveney (bencoveney@gmail.com)"
@@ -31,7 +31,6 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "test",
-    "tests"
+    "test"
   ]
 }
