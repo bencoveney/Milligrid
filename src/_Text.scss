@@ -9,7 +9,6 @@ body {
 	font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 	font-weight: 300;
 	letter-spacing: 0.01em;
-	line-height: 1.6;
 	color: $text-color;
 }
 
@@ -21,6 +20,9 @@ body {
 	// Include a basic reset as many text elements have spacing which interferes with the vertical flow.
 	margin: 0;
 	padding: 0;
+
+	font-size: 1.5rem;
+	line-height: 1.6;
 }
 
 a:link, a:visited, a:hover, a:active {
@@ -33,34 +35,78 @@ a:hover {
 
 h1 {
 	font-size: 3rem;
-	font-family: "Poiret One", cursive;
+	font-family: 'Lobster', cursive;
 	font-weight: 400;
 	background-color: $shaded-background-color;
 	border-bottom: 0.1rem solid $highlight-color;
-	margin: 1.6rem 0 - $gutter-width 1.5rem 0 - $gutter-width;
+	margin: 2.4rem 0 - $gutter-width 2.3rem 0 - $gutter-width;
 	padding: 0 $gutter-width;
 }
 
+h2, h3, h4, h5, h6 {
+	display: inline-block; // Prevent margins collapsing.
+	min-width: 100%;
+}
+
 h2 {
-	font-size: 2rem;
+	margin-top: 1.3rem;
+	font-size: 2.2rem;
 }
 
 h3 {
-	margin-top: 0.4rem;
-	font-size: 1.8rem;
+	margin-top: 1.6rem;
+	font-size: 2rem;
 }
 
 h4 {
-	margin-top: 0.7rem;
-	font-size: 1.6rem;
+	margin-top: 2rem;
+	font-size: 1.8rem;
 }
 
 h5 {
-	margin-top: 1rem;
-	font-size: 1.4rem;
+	margin-top: 2.3rem;
+	font-size: 1.6rem;
 }
 
 h6 {
 	margin-top: 1.3rem;
-	font-size: 1.2rem;
+	font-size: 1.4rem;
+}
+
+@mixin code-font {
+	font-family: 'Roboto Mono', Consolas, Courier New, Courier, monospace;
+	background-color: $text-color;
+	color: $shaded-background-color;
+}
+
+ul {
+	margin-left: $gutter-width * 3
+}
+
+/* Inline code */
+code {
+	@include code-font;
+	
+	font-size: 1.3rem;
+	padding: 0 0.2rem;
+	border-radius: 0.3rem;
+}
+
+/* Multi-line code */
+pre{
+	@include code-font;
+	
+	display: block;
+	border-radius: 1rem;
+	margin-left: -$gutter-width;
+	margin-right: -$gutter-width;
+	
+	code {
+		@include code-font;
+		
+		font-size: 1.5rem;
+		display: block;
+		padding: 2.4rem;
+		border-radius: 1rem;
+	}
 }

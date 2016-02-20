@@ -4,18 +4,19 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Milligrid Tests</title>
+	<title>Milligrid</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Mono' rel='stylesheet' type='text/css'>
 
 <<<<<<< HEAD:index.html
-	<link rel="stylesheet" href="dist/MilliGrid.css">
+	<link rel="stylesheet" href="dist/Milligrid.css">
 =======
-	<link rel="stylesheet" href="../dist/Milligrid.css">
->>>>>>> 66d65b17a9031db8ec8d0cb8727e8190c11c0fcf:test/index.html
+	<link rel="stylesheet" href="../dist/MilligridExtended.css">
+>>>>>>> 7b2b0802cf26a6e47ea7610dcfcdb06f14a49c98:test/index.html
 
 	<style>
 		/* Styling for the "Show Guidelines" button */
@@ -44,9 +45,34 @@
 			background-repeat: repeat-y;
 		}
 		
-		/* Highlighting to enhance demos */
-		.background {
-			background-color: rgba(205,166,228,0.5);
+		.demo * {
+			background-image: none;
+			background-color: transparent;
+			color: #000000;
+		}
+		
+		/* Demo enhancements */
+		.highlight {
+			color: #9b4dca;
+		}
+		.sample.row, .sample .row {
+			border: 0.1rem solid #b982d9;
+			background-color: #ebdbf4;
+			padding: 1.1rem 1rem;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		.sample .column {
+			border: 0.1rem dashed #cea7e4;
+			background-color: #f1e5f7;
+			padding: 1.1rem 1rem;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		
+		/* Some none-code elements could do with a monospace font */
+		.monospace {
+			font-family: 'Roboto Mono', monospace;
 		}
 	</style>
 	
@@ -56,7 +82,7 @@
 		window.onload = function() {
 			// Show guidelines on button click
 			$(".show-guidelines").click(function() {
-				$(".container").toggleClass("demo");
+				$("body").toggleClass("demo");
 			});
 		};
 	</script>
@@ -64,189 +90,307 @@
 </head>
 
 <body>
-	<a href="javascript:;" class="show-guidelines">Show Guidelines</a>
+	<a href="javascript:;" class="show-guidelines">Toggle Guidelines</a>
+	<div class="header">
+		<div class="container">
+			<h1 class="title"><a name="top"></a>Milligrid.</h1>
+			<p class="tagline">A configurable flexbox CSS grid based on Milligram.</p>
+		</div>
+	</div>
 	<div class="container">
-		<h1>Milligrid</h1>
 		<div class="row">
 			<div class="column">
 				<h2>About the Grid</h2>
-				<p>Milligrid is a responsive CSS grid system which uses flex-box as a basis for its layout. It is based on the excellent grid built into <a href="https://milligram.github.io">Milligram</a>, which was in turn based on work by <a href="http://philipwalton.github.io/solved-by-flexbox/demos/grids/">Philip Walton</a>. Milligrid aims to take the brilliant milligram grid and provide it in a standalone package with enhanced configuration options in the form of Sass variables.</p>
-			</div>
-			<div class="column">
-				<h3>Vertical Flow</h3>
-				<p>In addition to the grid system this project also bundles some small experimental text styling to help establish a vertical flow to your documents. This can be disabled by excluding the _Text.sass file from your Sass build.</p>
-				<h3>Find out more</h3>
-				<p>View Milligrid on <a href="https://github.com/bencoveney/Milligrid">GitHub</a></p>
-			</div>
-		</div>
-		<h1>Multiple Column Tests</h1>
-		<div class="row">
-			<div class="column">
-				<h2>One Column</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus. Ut id luctus nunc. Nullam lorem risus, sodales eu ipsum ac, consectetur consequat nisi. Nullam id mauris nisl. Ut quis viverra ipsum. Maecenas vel maximus nisi. Donec pulvinar justo in dui blandit tempus. Etiam luctus tortor ac leo dignissim, iaculis facilisis metus semper.</p>
+				<p>Milligrid is a responsive CSS grid system which uses flexbox as a basis for its layout. It is based on the excellent grid built into <a href="https://milligram.github.io">Milligram</a>, which was in turn based on work by <a href="http://philipwalton.github.io/solved-by-flexbox/demos/grids/">Philip Walton</a>. Milligrid aims to take the brilliant Milligram grid and provide it in a standalone package with enhanced configuration options in the form of Sass variables.</p>
 			</div>
 		</div>
 		<div class="row">
 			<div class="column">
-				<h3>Two Columns</h3>
-				<p>Donec rhoncus dignissim gravida. Cras nec mauris eget dolor lobortis imperdiet vitae vitae arcu. Vestibulum nec dictum purus. Suspendisse facilisis faucibus arcu, in maximus felis vestibulum eu. Mauris auctor turpis eget rhoncus vestibulum. Maecenas faucibus est id euismod fermentum. Mauris ut bibendum mauris. Suspendisse tortor augue, mollis sed eros sit amet, tempor finibus est. Aenean aliquam nunc vitae ante bibendum fermentum. Cras tincidunt ut nunc quis lobortis. Morbi malesuada lobortis efficitur. Nam consequat nibh consequat, vestibulum ipsum id, mattis dolor. Fusce faucibus gravida leo. Mauris aliquet condimentum quam, ut finibus massa consequat et.</p>
+				<h2>Get Milligrid</h2>
+				<ul>
+					<li><a href="">Download - coming soon</a></li>
+					<li><a href="">Bower - coming soon</a></li>
+				</ul>
+				<h2>Find out more</h2>
+				<p>Check out Milligrid on <a href="https://github.com/bencoveney/Milligrid">GitHub</a>.</p>
 			</div>
 			<div class="column">
-				<h3>Two Columns</h3>
-				<p>Nullam accumsan quam nec tortor vestibulum aliquam. Suspendisse at nisl imperdiet, mollis libero quis, posuere orci. Integer turpis urna, sagittis sed tortor eu, consectetur dictum ex. Sed egestas velit auctor velit tincidunt, in ultricies ante commodo. Integer vel diam sollicitudin, euismod ante in, dictum nulla. Sed a mi at erat consequat condimentum ac ut est. Maecenas rhoncus, ipsum non ultricies interdum, ligula felis eleifend orci, sed fringilla lectus lorem fringilla lectus. Quisque placerat efficitur quam eget dictum. Duis non nunc eu mauris ornare placerat. Phasellus sit amet gravida tortor. Donec lorem arcu, consequat eu felis a, blandit dictum ex. Donec sem ex, euismod at posuere sit amet, malesuada imperdiet arcu. Suspendisse sem dolor, blandit ac est id, blandit aliquam ligula. Curabitur pellentesque enim vel ipsum tempor luctus. Praesent pretium enim et massa faucibus iaculis.</p>
+				<h2>Jump to</h2>
+				<ul>
+					<li><a href="#basics">Grid Basics</a></li>
+					<li><a href="#nesting">Nested Grids</a></li>
+					<li><a href="#limits">Row Item Limits</a></li>
+					<li><a href="#widths">Offsets and Column Widths</a></li>
+					<li><a href="#sass">Sass Configuration</a></li>
+					<li><a href="#extended">Milligrid Extended</a></li>
+				</ul>
+			</div>
+		</div>
+		<h1><a name="basics"></a>Grid Basics</h1>
+		<div class="row">
+			<div class="column">
+				<h2>Container</h2>
+				<p>The <code>.container</code> CSS class creates the foundation for the grid rows and columns that are placed within it.</p>
+			</div>
+			<div class="column">
+				<h2>Row</h2>
+				<p>The <code>.row</code> CSS class is used within the container to arrange group items horizontally. Rows are built to grow and shrink with the screen size.</p>
+			</div>
+			<div class="column">
+				<h2>Column</h2>
+				<p>Individual items are given the <code>.column</code> CSS class. Space on the row will be split event between the columns. Columnns will wrap onto the next row rather than shrinking past a certain point.</p>
 			</div>
 		</div>
 		<div class="row">
 			<div class="column">
-				<h4>Three Columns</h4>
-				<p>Proin feugiat tristique nibh vitae eleifend. Etiam vitae enim at turpis congue vestibulum nec nec ante. Aliquam semper consectetur dui, at pulvinar mi consectetur vel. Pellentesque ut nibh sed ex malesuada tempor. Nullam ultricies, felis non vestibulum cursus, lorem lectus sollicitudin eros, nec condimentum leo urna ut sapien. Vivamus facilisis augue risus, vitae rhoncus velit dignissim id. Nulla lacinia lacus id vehicula suscipit. Pellentesque venenatis, libero nec feugiat eleifend, turpis felis finibus augue, sed venenatis augue felis sit amet leo. Donec lacinia cursus nulla ut congue. In ex purus, facilisis id diam et, aliquam rutrum nibh. Aliquam erat volutpat. Praesent mattis ornare porta. Nullam sit amet turpis et ipsum tempus fermentum.</p>
+				<pre><code>&lt;div class=&quot;<span class="highlight">container</span>&quot;&gt;
+    &lt;div class=&quot;<span class="highlight">row</span>&quot;&gt;
+        &lt;div class=&quot;<span class="highlight">column</span>&quot;&gt;
+            &lt;p&gt;Single item on a row.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;<span class="highlight">row</span>&quot;&gt;
+        &lt;div class=&quot;<span class="highlight">column</span>&quot;&gt;
+            &lt;p&gt;First row item.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;<span class="highlight">column</span>&quot;&gt;
+            &lt;p&gt;Second row item.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+			</div>
+		</div>
+		<div class="row sample">
+			<div class="column">
+				<p>Single item on a row.</p>
+			</div>
+		</div>
+		<div class="row sample">
+			<div class="column">
+				<p>First row item.</p>
 			</div>
 			<div class="column">
-				<h4>Three Columns</h4>
-				<p>Donec ultrices venenatis felis, eget fringilla elit feugiat ac. Suspendisse ut libero viverra, convallis ligula id, finibus metus. Nullam vitae lectus euismod, lacinia enim gravida, consequat augue. Suspendisse tincidunt eu est sed semper. Sed pharetra at elit eu vehicula. Ut rutrum scelerisque nisl vitae fringilla. Praesent feugiat leo nec tincidunt suscipit. Maecenas quis quam vel ligula consequat lacinia.</p>
+				<p>Second row item.</p>
 			</div>
+		</div>
+		<h1><a name="nesting"></a>Nested Grids</h1>
+		<div class="row">
 			<div class="column">
-				<h4>Three Columns</h4>
-				<p>Curabitur luctus lorem quis mi sodales, a pretium nulla pulvinar. Suspendisse enim est, tincidunt eu nibh eu, mollis porttitor massa. Vivamus non leo luctus, scelerisque lacus vitae, auctor libero. Etiam sollicitudin neque lacinia, vestibulum velit non, placerat nisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent condimentum dolor sit amet sem vestibulum varius. Aenean sollicitudin massa in purus mattis viverra. Pellentesque et faucibus sem. Maecenas quis scelerisque ex. Pellentesque mollis sagittis porta. Suspendisse tincidunt quam nec lacinia fermentum. Sed finibus, turpis at fringilla ornare, magna magna malesuada justo, eu semper ex ipsum id lectus. Phasellus vulputate est a blandit mollis. Duis quis orci quis nunc bibendum suscipit.</p>
+				<p>Grids can be nested by placing a <code>.row</code> element inside of a <code>.column</code> element. The nested grid does not require its own <code>.container</code> element.</p>
 			</div>
 		</div>
 		<div class="row">
 			<div class="column">
-				<h5>Four Columns</h5>
-				<p>Fusce convallis nisl at cursus eleifend. Duis blandit porttitor viverra. Ut tempus cursus risus at pharetra. Aliquam ac massa et nisl egestas lobortis. Nullam nunc mauris, congue eget velit vel, vehicula fermentum velit. Praesent sit amet luctus tortor. Etiam eu blandit turpis. Fusce a mattis nulla, in molestie lacus. Proin at enim ac est porta iaculis. Quisque et varius est. Proin quis odio ac augue fringilla venenatis quis eu velit. In hac habitasse platea dictumst.</p>
-			</div>
-			<div class="column">
-				<h5>Four Columns</h5>
-				<p>Nam pretium odio ut euismod imperdiet. Nam vehicula urna augue, ac pellentesque felis consequat eu. Nulla laoreet pharetra tempor. Donec lacinia enim non ullamcorper imperdiet. Sed justo ipsum, convallis sed diam eu, malesuada volutpat purus. Aenean in ipsum eget dolor lacinia laoreet. Morbi ex purus, cursus convallis luctus nec, molestie ut lorem. Nam feugiat pretium accumsan. Nam rutrum at magna vitae aliquam. Duis semper tortor porta semper rutrum. Etiam tristique nisl eu est pretium, tempus lobortis nunc sagittis. Donec a fermentum urna, sit amet sagittis velit. Proin finibus interdum tellus rhoncus egestas.</p>
-			</div>
-			<div class="column">
-				<h5>Four Columns</h5>
-				<p>Etiam nec leo ac ligula luctus bibendum in sit amet sapien. Sed tempor elit eu quam consequat, vitae scelerisque massa mollis. Donec sit amet nulla accumsan, auctor sem ut, placerat nisl. Donec ultrices odio in justo lacinia, tincidunt venenatis velit ornare. Maecenas interdum suscipit aliquet. Sed eu ipsum eget erat rhoncus euismod. Maecenas non condimentum ligula. Integer eu tincidunt libero. Morbi quam ex, congue at magna at, aliquet feugiat nisl. Nam lobortis fringilla vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-			</div>
-			<div class="column">
-				<h5>Four Columns</h5>
-				<p>Vestibulum volutpat in quam imperdiet ultricies. Phasellus egestas lorem vitae placerat facilisis. Aliquam risus leo, placerat ut lacinia a, scelerisque sed leo. Nullam scelerisque libero vel nulla interdum laoreet. Phasellus in mauris eget urna ullamcorper tristique at quis lacus. Vivamus eu mi ligula. Sed eu sapien ut metus ultricies varius nec sodales mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+				<pre><code>&lt;div class=&quot;<span class="highlight">container</span>&quot;&gt;
+    &lt;div class=&quot;<span class="highlight">row</span>&quot;&gt;
+        &lt;div class=&quot;<span class="highlight">column</span>&quot;&gt;
+            &lt;p&gt;Column in parent.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;<span class="highlight">column</span>&quot;&gt;
+            &lt;div class=&quot;<span class="highlight">row</span>&quot;&gt;
+                &lt;div class=&quot;<span class="highlight">column</span>&quot;&gt;
+                    &lt;p&gt;Column in child.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;<span class="highlight">column</span>&quot;&gt;
+                    &lt;p&gt;Column in child.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
 			</div>
 		</div>
-		<h1>Nested Column Tests</h1>
-		<div class="row">
+		<div class="row sample">
 			<div class="column">
-				<h2>Non-nested Column</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus. Ut id luctus nunc. Nullam lorem risus, sodales eu ipsum ac, consectetur consequat nisi. Nullam id mauris nisl. Ut quis viverra ipsum. Maecenas vel maximus nisi. Donec pulvinar justo in dui blandit tempus. Etiam luctus tortor ac leo dignissim, iaculis facilisis metus semper.</p>
-				<h4>Non-nested Column</h4>
-				<p>Proin feugiat tristique nibh vitae eleifend. Etiam vitae enim at turpis congue vestibulum nec nec ante. Aliquam semper consectetur dui, at pulvinar mi consectetur vel. Pellentesque ut nibh sed ex malesuada tempor. Nullam ultricies, felis non vestibulum cursus, lorem lectus sollicitudin eros, nec condimentum leo urna ut sapien. Vivamus facilisis augue risus, vitae rhoncus velit dignissim id. Nulla lacinia lacus id vehicula suscipit. Pellentesque venenatis, libero nec feugiat eleifend, turpis felis finibus augue, sed venenatis augue felis sit amet leo. Donec lacinia cursus nulla ut congue. In ex purus, facilisis id diam et, aliquam rutrum nibh. Aliquam erat volutpat. Praesent mattis ornare porta. Nullam sit amet turpis et ipsum tempus fermentum.</p>
+				<p>Column in parent.</p>
 			</div>
 			<div class="column">
 				<div class="row">
 					<div class="column">
-						<h3>Nested Column</h3>
-						<p>Donec rhoncus dignissim gravida. Cras nec mauris eget dolor lobortis imperdiet vitae vitae arcu. Vestibulum nec dictum purus. Suspendisse facilisis faucibus arcu, in maximus felis vestibulum eu. Mauris auctor turpis eget rhoncus vestibulum. Maecenas faucibus est id euismod fermentum. Mauris ut bibendum mauris. Suspendisse tortor augue, mollis sed eros sit amet, tempor finibus est. Aenean aliquam nunc vitae ante bibendum fermentum. Cras tincidunt ut nunc quis lobortis. Morbi malesuada lobortis efficitur. Nam consequat nibh consequat, vestibulum ipsum id, mattis dolor. Fusce faucibus gravida leo. Mauris aliquet condimentum quam, ut finibus massa consequat et.</p>
+						<p>Column in child.</p>
 					</div>
 					<div class="column">
-						<h3>Nested Column</h3>
-						<p>Nullam accumsan quam nec tortor vestibulum aliquam. Suspendisse at nisl imperdiet, mollis libero quis, posuere orci. Integer turpis urna, sagittis sed tortor eu, consectetur dictum ex. Sed egestas velit auctor velit tincidunt, in ultricies ante commodo. Integer vel diam sollicitudin, euismod ante in, dictum nulla. Sed a mi at erat consequat condimentum ac ut est. Maecenas rhoncus, ipsum non ultricies interdum, ligula felis eleifend orci, sed fringilla lectus lorem fringilla lectus. Quisque placerat efficitur quam eget dictum. Duis non nunc eu mauris ornare placerat. Phasellus sit amet gravida tortor. Donec lorem arcu, consequat eu felis a, blandit dictum ex.</p>
+						<p>Column in child.</p>
 					</div>
 				</div>
 			</div>
 		</div>
-		<h1>Maximum Number Of Items Per Row Tests</h1>
-		<p>Demonstrates the limiting of the number of items that are allowed to inhabit a row before wrapping occurs. If the container-width has been specified as a percentage this will be maintained as the grid grows and shrinks. If the container width has been specified as an absolute value the columns will wrap more as the screen shrinks. Numbers which divide evenly into the overall maximum number of columns (12 in this case should align correctly to the grid).</p>
-		<h2>12 Items Per Row</h2>
-		<div class="row row-12">
-			<div class="column"><p>Item 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 5. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 6. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 7. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 8. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 9. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 10. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 11. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 12. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 13. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 14. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+		<h1><a name="limits"></a>Row Item Limits</h1>
+		<div class="row">
+			<div class="column">
+				<p>A limit can be applied to the number of items that are placed on a row by using the <code>.row-#</code> classes, for example <code>.row-3</code> to limit the number of items is 3 items. Numbers which are factors of 12 will look the best (assuming the default configuration is used).</p>
+			</div>
 		</div>
-		<h2>6 Items Per Row</h2>
-		<div class="row row-6">
-			<div class="column"><p>Item 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 5. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 6. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 7. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 8. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 9. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 10. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 11. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 12. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+		<div class="row">
+			<div class="column">
+				<pre><code>&lt;div class=&quot;<span class="highlight">row row-3</span>&quot;&gt;
+    &lt;div class=&quot;<span class="highlight">column</span>&quot;&gt;
+        &lt;p&gt;
+            1st item on the row.
+        &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;<span class="highlight">column</span>&quot;&gt;
+        &lt;p&gt;
+            2nd item on the row.
+        &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;<span class="highlight">column</span>&quot;&gt;
+        &lt;p&gt;
+            3rd item on the row.
+        &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;<span class="highlight">column</span>&quot;&gt;
+        &lt;p&gt;
+            4th item will wrap to the next line.
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+			</div>
 		</div>
-		<h2>4 Items Per Row</h2>
-		<div class="row row-4">
-			<div class="column"><p>Item 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 5. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 6. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 7. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 8. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+		<div class="row row-3 sample">
+			<div class="column">
+				<p>
+					1st item on the row.
+				</p>
+			</div>
+			<div class="column">
+				<p>
+					2nd item on the row.
+				</p>
+			</div>
+			<div class="column">
+				<p>
+					3rd item on the row.
+				</p>
+			</div>
+			<div class="column">
+				<p>
+					4th item will wrap to the next line.
+				</p>
+			</div>
 		</div>
-		<h2>3 Items Per Row</h2>
+		<h1><a name="widths"></a>Offsets and Column Widths</h1>
+		<div class="row">
+			<div class="column">
+				<h2>Offset</h2>
+				<p>A preceeding gap can be placed in front of a column using the <code>.column-offset-#</code> classes, for example <code>.column-offset-3</code> to offset the column by the width of 3 of the 12 available columns.</p>
+			</div>
+			<div class="column">
+				<h2>Width</h2>
+				<p>A limit can be put on the width of a column using the <code>.column-wide-#</code> classes, for example <code>.column-wide-3</code> to limit the column to the width of 3 of the 12 available columns.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="column">
+				<pre><code>&lt;div class=&quot;<span class="highlight">row</span>&quot;&gt;
+    &lt;div class=&quot;<span class="highlight">column column-wide-4</span>&quot;&gt;
+        &lt;p&gt;
+            0x offset, 4x width.
+        &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;<span class="highlight">column column-offset-2 column-wide-6</span>&quot;&gt;
+        &lt;p&gt;
+            2x offset, 6x width.
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+			</div>
+		</div>
+		<div class="row sample">
+			<div class="column column-wide-4">
+				<p>
+					0x offset, 4x width.
+				</p>
+			</div>
+			<div class="column column-offset-2 column-wide-6">
+				<p>
+					2x offset, 6x width.
+				</p>
+			</div>
+		</div>
+		<h1><a name="sass"></a>Sass Configuration</h1>
+		<h2>Variables</h2>
 		<div class="row row-3">
-			<div class="column"><p>Item 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 5. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 6. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
+			<div class="column">
+				<h3 class="monospace">$rule-prefix</h3>
+				<p>Defines an optional prefix that can will be prepended to all rule names. This is particularly useful if you need to deploy Milligrid in conjunction with another system which has colliding names (such as Bootstrap or Milligram).</p>
+			</div>
+			<div class="column">
+				<h3 class="monospace">$container-max-width</h3>
+				<p>The maximum width of the page that the encompassing <code>.container</code> will stretch to. Override this value for a thin, thick or fluid grid width.</p>
+			</div>
+			<div class="column">
+				<h3 class="monospace">$gutter-width</h3>
+				<p>The amount of horizontal space that each <code>.column</code> will reserve on either side of it. The effective distance between <code>.column</code> elements inside the grid will be doubled.</p>
+			</div>
+			<div class="column">
+				<h3 class="monospace">$gutter-width-vertical</h3>
+				<p>The amount of vertical space that will be left between each <code>.row</code> element and also between <code>.column</code> elements on a row which have wrapped onto the next line</p>
+			</div>
+			<div class="column">
+				<h3 class="monospace">$maximum-items-per-row</h3>
+				<p>The maximum of items which will be allowed on a <code>.row</code> before wrapping occurs. Remember that individual rows can be configured later using <code>.row-#</code>classes so a high number with lots of divisors is a good idea, such as 12, 15 or 16</p>
+			</div>
+			<div class="column">
+				<h3 class="monospace">$columns-as-rows-threshold</h3>
+				<p>On smaller devices it doesn't make sense to still try to display 12 elements on a row. This variable allows configuration of the point at which <code>.column</code> elements in a row appear as rows themselves.</p>
+			</div>
 		</div>
-		<h2>2 Items Per Row</h2>
-		<div class="row row-2">
-			<div class="column"><p>Item 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-			<div class="column"><p>Item 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices quam eget risus facilisis maximus.</p></div>
-		</div>
-		<h1>Offsets and column widths</h1>
+		<h2>Mixins</h2>
 		<div class="row">
-			<div class="column column-wide-1 column-offset-11 background"><p>1x width, 11x offset.</p></div>
-		</div>
-		<div class="row">
-			<div class="column column-wide-2 column-offset-10 background"><p>2x width, 10x offset.</p></div>
-		</div>
-		<div class="row">
-			<div class="column column-wide-3 column-offset-9 background"><p>3x width, 9x offset.</p></div>
-		</div>
-		<div class="row">
-			<div class="column column-wide-4 column-offset-8 background"><p>4x width, 8x offset.</p></div>
-		</div>
-		<div class="row">
-			<div class="column column-wide-5 column-offset-7 background"><p>5x width, 7x offset.</p></div>
-		</div>
-		<div class="row">
-			<div class="column column-wide-6 column-offset-6 background"><p>6x width, 6x offset.</p></div>
+			<div class="column">
+				<p>When composing your own Sass classes using <code>@extend</code> you can often end up in a position where a common element (such as grid classes) have been extended so often that the CSS selectors become large and messy. To combat this Milligrid provides every single one of its classes as a mixin so that you can build your own composite CSS styles without ending up in selector hell!</p>
+			</div>
 		</div>
 		<div class="row">
-			<div class="column column-wide-7 column-offset-5 background"><p>7x width, 5x offset.</p></div>
+			<div class="column">
+				<h3>ContainerMixins</h3>
+				<ul class="monospace">
+					<li>Container</li>
+				</ul>
+			</div>
+			<div class="column">
+				<h3>Row Mixins</h3>
+				<ul class="monospace">
+					<li>row</li>
+					<li>row-top</li>
+					<li>row-bottom</li>
+					<li>row-center</li>
+					<li>row-stretch</li>
+					<li>row-baseline</li>
+					<li>row-number($i, $column-class-name)</li>
+				</ul>
+			</div>
+			<div class="column">
+				<h3>Column Mixins</h3>
+				<ul class="monospace">
+					<li>column</li>
+					<li>column-top</li>
+					<li>column-bottom</li>
+					<li>column-center</li>
+					<li>column-wide($percent)</li>
+					<li>column-offset($percent)</li>
+				</ul>
+			</div>
 		</div>
+		<h1><a name="extended"></a>Milligrid Extended</h1>
 		<div class="row">
-			<div class="column column-wide-8 column-offset-4 background"><p>8x width, 4x offset.</p></div>
+			<div class="column">
+				<p>The Milligrid system also includes an extended variant which goes beyond the grid system to provide base styling for other HTML elements. The system's primary aim is to establish a <em>vertical rhythm</em> to the document. The extended styles are incomplete and undocumented, however you can see them in use on this page.</p>
+			</div>
+			<div class="column">
+				<p>To use Milligrid Extended on your site you must include the following google web-fonts:</p>
+				<ul>
+					<li>Roboto</li>
+					<li>Roboto-Mono</li>
+					<li>Lobster</li>
+				</ul>
+			</div>
 		</div>
-		<div class="row">
-			<div class="column column-wide-9 column-offset-3 background"><p>9x width, 3x offset.</p></div>
-		</div>
-		<div class="row">
-			<div class="column column-wide-10 column-offset-2 background"><p>10x width, 2x offset.</p></div>
-		</div>
-		<div class="row">
-			<div class="column column-wide-11 column-offset-1 background"><p>11x width, 1x offset.</p></div>
-		</div>
-		<div class="row">
-			<div class="column column-wide-12 background"><p>12x width.</p></div>
-		</div>
+	</div>
+	<div class="footer">
+		<a href="https://github.com/bencoveney/Milligrid">View on GitHub</a> - <a href="#top">Back to top</a>
 	</div>
 </body>
 </html>

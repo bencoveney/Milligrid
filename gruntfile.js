@@ -42,8 +42,9 @@ module.exports = function ( grunt ) {
 			dev: {
 				files: {
 					'dist/Milligrid.css': 'src/**/Milligrid.scss',
+					'dist/MilligridExtended.css': 'src/**/MilligridExtended.scss'
 				}
-			},
+			}
 		},
 
 		// Parse CSS and add vendor-prefixed CSS properties using the Can I Use database.
@@ -53,10 +54,11 @@ module.exports = function ( grunt ) {
 					browsers: [
 						'last 1 versions'
 					],
-					map: false
+					map: true
 				},
 				files: {
-					'dist/MilliGrid.css': 'dist/MilliGrid.css'
+					'dist/Milligrid.css': 'dist/Milligrid.css',
+					'dist/MilligridExtended.css': 'dist/MilligridExtended.css'
 				}
 			}
 		}

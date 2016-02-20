@@ -1,0 +1,37 @@
+{
+  "name": "milligrid",
+  "description": "A flexbox CSS grid framework",
+  "homepage": "https://github.com/bencoveney/milligram",
+  "license": "MIT",
+  "authors": [
+    "Ben Coveney (bencoveney@gmail.com)"
+  ],
+  "main": "dist/milligrid.css",
+  "keywords": [
+    "bootstrap",
+    "css",
+    "css3",
+    "flexbox",
+    "flex-box",
+    "front-end",
+    "framework",
+    "html",
+    "html5",
+    "less",
+    "responsive",
+    "mobile",
+    "mobile-first",
+    "postcss",
+    "sass",
+    "scss",
+    "grid"
+  ],
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

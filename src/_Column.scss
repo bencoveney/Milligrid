@@ -1,0 +1,60 @@
+// Base column rules.
+@mixin column {
+	display: block;
+	flex: 1;
+	margin-left: 0;
+	max-width: 100%;
+	width: 100%;
+	min-width: $container-max-width / $maximum-items-per-row;
+	margin-bottom: $gutter-width-vertical;
+	padding: 0 $gutter-width;
+}
+
+// Vertical alignment options.
+@mixin column-top {
+		align-self: flex-start;
+}
+@mixin column-bottom {
+		align-self: flex-end;
+}
+@mixin column-center {
+		align-self: center;
+}
+
+// Specific widths/offsets.
+@mixin column-wide($percent) {
+	flex: 0 0 $percent;
+	max-width: $percent;
+}
+@mixin column-offset($percent) {
+	margin-left: $percent;
+}
+
+// Construction of the static column rules.
+.#{$rule-prefix}column {
+	@include column;
+
+	.#{$rule-prefix}column-top {
+		@include column-top;
+	}
+	.#{$rule-prefix}column-bottom {
+		@include column-bottom;
+	}
+	.#{$rule-prefix}column-center {
+		@include column-center;
+	}
+
+
+	// Larger than mobile screen
+	@media (min-width: $columns-as-rows-threshold) {
+		@for $i from 1 through $maximum-items-per-row {
+			$percent: percentage((1 / $maximum-items-per-row) * $i);
+			&.#{$rule-prefix}column-wide-#{$i} {
+				@include column-wide($percent);
+			}
+			&.#{$rule-prefix}column-offset-#{$i} {
+				@include column-offset($percent);
+			}
+		}
+	}
+}
