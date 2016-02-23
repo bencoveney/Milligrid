@@ -34,3 +34,4 @@ The .scss Sass source code files. These can be configured using the variables or
 + Responsive utility classes (lg, md, sm, xs).
 + A More complete set of text element styles.
 + Configurable vertical rhythm.
++ Grid elements shouldn't rely on global box-sizing.
