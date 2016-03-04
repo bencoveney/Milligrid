@@ -24,10 +24,14 @@ $columns-as-rows-threshold: 40rem !default;
 
 // MilligridExtended options:
 
-// The color for standard body text
-$text-color: #222222 !default;
+$theme-color: #9b4dca !default;
+$theme-color-darkened: #793d9e !default;
 
-$shaded-background-color: #eeeeee !default;
+$foreground-color: #222 !default;
+$foreground-color-lightened: #777 !default;
+$foreground-color-inverted: #FFF !default;
 
-// The color for visual flair
-$highlight-color: #9b4dca !default;
+$background-color-shaded: #eee !default;
+$background-color-inverted: #222 !default;
+
+$shadow-color: rgba(0, 0, 0, .3);

@@ -1,79 +1,79 @@
 // Base row rules.
 @mixin row {
-    // No spacing, just a container
-    padding: 0;
-    margin: 0 0 0 (0 - $gutter-width);
+  // No spacing, just a container
+  padding: 0;
+  margin: 0 0 0 (0 - $gutter-width);
 
-    // Display the content in rows
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  // Display the content in rows
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 
-    // Fill the parent container
-    width: calc(100% + 2.0rem);
+  // Fill the parent container
+  width: calc(100% + 2.0rem);
 
-    // Smaller than mobile screen
-    @media (max-width: $columns-as-rows-threshold) {
-        flex-direction: column;
-    }
+  // Smaller than mobile screen
+  @media (max-width: $columns-as-rows-threshold) {
+    flex-direction: column;
+  }
 }
 
 // Vertical alignment.
 @mixin row-top {
-    align-items: flex-start;
+  align-items: flex-start;
 }
 
 @mixin row-bottom {
-    align-items: flex-end;
+  align-items: flex-end;
 }
 
 @mixin row-center {
-    align-items: center;
+  align-items: center;
 }
 
 @mixin row-stretch {
-    align-items: stretch;
+  align-items: stretch;
 }
 
 @mixin row-baseline {
-    align-items: baseline;
+  align-items: baseline;
 }
 
 // Specification of the maximum number of items per row.
 // Requires the name of the column classes that will be placed within the row.
 @mixin row-number($number, $column-rule-name) {
-    .#{$column-rule-name} {
-        min-width: percentage(1 / $number);
-    }
+  .#{$column-rule-name} {
+    min-width: percentage(1 / $number);
+  }
 }
 
 // Construction of the static row rules.
 .#{$rule-prefix}row {
-    @include row;
+  @include row;
 
-    &.#{$rule-prefix}row-top {
-        @include row-top;
-    }
+  &.#{$rule-prefix}row-top {
+    @include row-top;
+  }
 
-    &.#{$rule-prefix}row-bottom {
-        @include row-bottom;
-    }
+  &.#{$rule-prefix}row-bottom {
+    @include row-bottom;
+  }
 
-    &.#{$rule-prefix}row-center {
-        @include row-center;
-    }
+  &.#{$rule-prefix}row-center {
+    @include row-center;
+  }
 
-    &.#{$rule-prefix}row-stretch {
-        @include row-stretch;
-    }
+  &.#{$rule-prefix}row-stretch {
+    @include row-stretch;
+  }
 
-    &.#{$rule-prefix}row-baseline {
-        @include row-baseline;
-    }
+  &.#{$rule-prefix}row-baseline {
+    @include row-baseline;
+  }
 
-    @for $i from 1 through $maximum-items-per-row {
-        &.#{$rule-prefix}row-#{$i} {
-            @include row-number($i, #{$rule-prefix}column);
-        }
+  @for $i from 1 through $maximum-items-per-row {
+    &.#{$rule-prefix}row-#{$i} {
+      @include row-number($i, #{$rule-prefix}column);
     }
+  }
 }
