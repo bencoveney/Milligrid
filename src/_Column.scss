@@ -41,10 +41,7 @@
   margin-left: $percent;
 }
 
-// Construction of the static column rules.
-.#{$rule-prefix}column {
-  @include column;
-
+@mixin column-vertical-alignment-classes() {
   &.#{$rule-prefix}column-top {
     @include column-top;
   }
@@ -64,19 +61,36 @@
   &.#{$rule-prefix}column-baseline {
     @include column-baseline;
   }
+}
 
+@mixin column-width-classes() {
   // Larger than mobile screen
   @media (min-width: $columns-as-rows-threshold) {
     @for $i from 1 through $maximum-items-per-row {
       $percent: percentage((1 / $maximum-items-per-row) * $i);
-
       &.#{$rule-prefix}column-wide-#{$i} {
         @include column-wide($percent);
       }
+    }
+  }
+}
 
+@mixin column-offset-classes() {
+  // Larger than mobile screen
+  @media (min-width: $columns-as-rows-threshold) {
+    @for $i from 1 through $maximum-items-per-row {
+      $percent: percentage((1 / $maximum-items-per-row) * $i);
       &.#{$rule-prefix}column-offset-#{$i} {
         @include column-offset($percent);
       }
     }
   }
+}
+
+// Construction of the static column rules.
+.#{$rule-prefix}column {
+  @include column;
+  @include column-vertical-alignment-classes();
+  @include column-width-classes();
+  @include column-offset-classes();
 }

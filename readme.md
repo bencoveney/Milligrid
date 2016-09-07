@@ -25,6 +25,9 @@ The .scss Sass source code files. These can be configured using the variables or
 
 ## Release History:
 
+### v1.0.1 - 07/09/2016
++ Added additional mixins.
+
 ### v1.0.0 - 20/02/2016
 + Initial release.
 + Complete grid system.

@@ -47,10 +47,7 @@
   }
 }
 
-// Construction of the static row rules.
-.#{$rule-prefix}row {
-  @include row;
-
+@mixin row-vertical-alignment-classes() {
   &.#{$rule-prefix}row-top {
     @include row-top;
   }
@@ -70,10 +67,20 @@
   &.#{$rule-prefix}row-baseline {
     @include row-baseline;
   }
+}
 
+@mixin row-number-classes() {
   @for $i from 1 through $maximum-items-per-row {
     &.#{$rule-prefix}row-#{$i} {
       @include row-number($i, #{$rule-prefix}column);
     }
   }
+}
+
+// Construction of the static row rules.
+.#{$rule-prefix}row {
+  @include row;
+
+  @include row-vertical-alignment-classes();
+  @include row-number-classes();
 }
