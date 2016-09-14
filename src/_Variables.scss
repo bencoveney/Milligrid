@@ -1,7 +1,7 @@
 // An optional prefix to place in front of all css rules.
 // This allows for compatibility with other frameworks which share class names (i.e. Bootstrap, Milligram).
-// Example: "mg-"
-$rule-prefix: "" !default;
+// Example: 'mg-'
+$rule-prefix: '' !default;
 
 // Grid width
 $container-max-width: 120rem !default;
@@ -29,7 +29,7 @@ $theme-color-darkened: #793d9e !default;
 
 $foreground-color: #222 !default;
 $foreground-color-lightened: #777 !default;
-$foreground-color-inverted: #FFF !default;
+$foreground-color-inverted: #fff !default;
 
 $background-color-shaded: #eee !default;
 $background-color-inverted: #222 !default;

@@ -10,8 +10,8 @@
 
   h1.title {
     background-color: transparent;
-    font-size: 4em;
     border-bottom: 0;
+    font-size: 4em;
     margin: 0;
     padding: 0;
     text-shadow: 2px 2px 5px $shadow-color;
@@ -22,9 +22,9 @@
 // Gives full width muted footer styling.
 .footer {
   background-color: $background-color-shaded;
+  border-top: .1rem solid $theme-color;
   color: $foreground-color-lightened;
   margin-top: 4.7rem;
-  padding: 2.4rem 2.4rem 4.8rem 2.4rem;
+  padding: 2.4rem 2.4rem 4.8rem;
   text-align: center;
-  border-top: .1rem solid $theme-color;
 }

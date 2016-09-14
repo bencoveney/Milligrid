@@ -8,6 +8,11 @@
   min-width: $container-max-width / $maximum-items-per-row;
   margin-bottom: $gutter-width-vertical;
   padding: 0 $gutter-width;
+
+  // Smaller than mobile screen
+  @media (max-width: $columns-as-rows-threshold) {
+    flex-basis: auto;
+  }
 }
 
 // Vertical alignment options.
@@ -68,6 +73,7 @@
   @media (min-width: $columns-as-rows-threshold) {
     @for $i from 1 through $maximum-items-per-row {
       $percent: percentage((1 / $maximum-items-per-row) * $i);
+
       &.#{$rule-prefix}column-wide-#{$i} {
         @include column-wide($percent);
       }
@@ -80,6 +86,7 @@
   @media (min-width: $columns-as-rows-threshold) {
     @for $i from 1 through $maximum-items-per-row {
       $percent: percentage((1 / $maximum-items-per-row) * $i);
+
       &.#{$rule-prefix}column-offset-#{$i} {
         @include column-offset($percent);
       }

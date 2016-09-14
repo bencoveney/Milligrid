@@ -10,7 +10,7 @@
   flex-wrap: wrap;
 
   // Fill the parent container
-  width: calc(100% + 2.0rem);
+  width: calc(100% + 2rem);
 
   // Smaller than mobile screen
   @media (max-width: $columns-as-rows-threshold) {

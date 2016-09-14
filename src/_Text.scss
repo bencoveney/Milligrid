@@ -14,8 +14,8 @@ body {
 
 // Reset options
 *,
-*:after,
-*:before {
+*::after,
+*::before {
   // Set box-sizing globally to handle padding and border widths
   box-sizing: inherit;
 
