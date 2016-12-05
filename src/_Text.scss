@@ -84,11 +84,21 @@ h6 {
   margin-top: 1.3rem;
 }
 
+// Text element styling
+p {
+  margin-bottom: 2.4rem;
+}
+
+small {
+  color: $foreground-color-lightened;
+  font-size: .75em;
+}
+
 // List styling
-ul {
-  margin-bottom: 1.2rem;
+ul,
+ol {
+  margin-bottom: 2.4rem;
   margin-left: $gutter-width * 3;
-  margin-top: 1.2rem;
 }
 
 // Code styling, both inline and multi-line
@@ -102,8 +112,8 @@ code {
   @include code-font;
 
   border-radius: .3rem;
-  font-size: 1.3rem;
-  padding: 0 .2rem;
+  font-size: .9em;
+  padding: 0 .3em;
 }
 
 pre {
@@ -111,8 +121,8 @@ pre {
 
   border-radius: 1rem;
   display: block;
-  margin-left: -$gutter-width;
-  margin-right: -$gutter-width;
+  //margin-left: -$gutter-width;
+  //margin-right: -$gutter-width;
 
   code {
     @include code-font;
@@ -120,6 +130,7 @@ pre {
     border-radius: 1rem;
     display: block;
     font-size: 1.5rem;
-    padding: 2.4rem;
+    padding: 1.2rem;
+    margin: 0 1.2rem 0 1.2rem;
   }
 }
