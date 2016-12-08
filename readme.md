@@ -25,6 +25,9 @@ The .scss Sass source code files. These can be configured using the variables or
 
 ## Release History:
 
+### v1.0.4 - 08/12/2016
++ Actually included `src/` inside NPM package.
+
 ### v1.0.3 - 08/12/2016
 + Added some new inline tags to extended CSS.
 + Included `src/` inside NPM package.
