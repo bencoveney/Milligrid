@@ -32,7 +32,6 @@
     ".npmignore",
     "Gruntfile.js",
     "package.json",
-    "src",
     "test"
   ],
   "devDependencies": {
