@@ -45,3 +45,9 @@ The .scss Sass source code files. These can be configured using the variables or
 + A More complete set of text element styles.
 + Configurable vertical rhythm.
 + Grid elements shouldn't rely on global box-sizing.
+
+## Release Procedure
++ Update version number in `package.json`
++ Update release notes in `readme.md`
++ Create GitHub release (this is also a bower publish)
++ Do `npm publish`
