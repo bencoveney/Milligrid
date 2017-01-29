@@ -99,6 +99,14 @@ ul,
 ol {
   margin-bottom: 2.4rem;
   margin-left: $gutter-width * 3;
+  display: inline-block;
+}
+
+// Code styling, both inline and multi-line
+@mixin code-font {
+  font-family: 'Roboto Mono', Consolas, Courier New, Courier, monospace;
+  background-color: $background-color-inverted;
+  color: $foreground-color-inverted;
 }
 
 // Code styling, both inline and multi-line
@@ -121,8 +129,6 @@ pre {
 
   border-radius: 1rem;
   display: block;
-  //margin-left: -$gutter-width;
-  //margin-right: -$gutter-width;
 
   code {
     @include code-font;

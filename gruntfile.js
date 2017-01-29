@@ -30,7 +30,7 @@ module.exports = function ( grunt ) {
     
     // Clear files and folders
     clean: {
-      all: [ 'dist' ]
+      all: [ 'dist/*' ]
     },
     
     // Compile Sass files to CSS

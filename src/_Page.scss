@@ -1,7 +1,7 @@
 // Wrapper element for a container.
 // Gives large header styling.
 .header {
-  background: linear-gradient(to bottom, $theme-color 0%, $theme-color-darkened 100%);
+  background: linear-gradient(to bottom, $theme-color 0%, $theme-color-dark 100%);
   background-color: $theme-color;
   color: $foreground-color-inverted;
   margin-bottom: 2.4rem;
@@ -27,4 +27,29 @@
   margin-top: 4.7rem;
   padding: 2.4rem 2.4rem 4.8rem;
   text-align: center;
+}
+
+.section {
+  margin: 0 (-$gutter-width);
+  padding: 0 $gutter-width;
+}
+
+.palette-shaded {
+  background-color: $background-color-shaded;
+  color: $foreground-color;
+}
+
+.palette-inverted {
+  background-color: $background-color-inverted;
+  color: $foreground-color-inverted;
+}
+
+.palette-theme {
+  background-color: $theme-color;
+  color: $foreground-color;
+}
+
+.palette-theme-dark {
+  background-color: $theme-color-dark;
+  color: $foreground-color;
 }
