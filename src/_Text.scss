@@ -7,15 +7,12 @@ html {
 
 body {
   color: $foreground-color;
-  font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-weight: 300;
   letter-spacing: .01em;
 }
 
-// Reset options
-*,
-*::after,
-*::before {
+@mixin reset {
   // Set box-sizing globally to handle padding and border widths
   box-sizing: inherit;
 
@@ -27,16 +24,28 @@ body {
   padding: 0;
 }
 
-// Link styling
-a:link,
-a:visited,
-a:hover,
-a:active {
-  color: $theme-color;
+// Reset options
+* {
+  @include reset;
+
+  ::after,
+  ::before {
+    @include reset;
+  }
 }
 
-a:hover {
-  text-decoration: none;
+// Link styling
+a {
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    color: $theme-color;
+  }
+
+  :hover {
+    text-decoration: none;
+  }
 }
 
 // Header styling
@@ -97,23 +106,16 @@ small {
 // List styling
 ul,
 ol {
+  display: inline-block;
   margin-bottom: 2.4rem;
   margin-left: $gutter-width * 3;
-  display: inline-block;
 }
 
 // Code styling, both inline and multi-line
 @mixin code-font {
-  font-family: 'Roboto Mono', Consolas, Courier New, Courier, monospace;
   background-color: $background-color-inverted;
   color: $foreground-color-inverted;
-}
-
-// Code styling, both inline and multi-line
-@mixin code-font {
   font-family: 'Roboto Mono', Consolas, Courier New, Courier, monospace;
-  background-color: $background-color-inverted;
-  color: $foreground-color-inverted;
 }
 
 code {
@@ -136,7 +138,7 @@ pre {
     border-radius: 1rem;
     display: block;
     font-size: 1.5rem;
+    margin: 0 1.2rem;
     padding: 1.2rem;
-    margin: 0 1.2rem 0 1.2rem;
   }
 }

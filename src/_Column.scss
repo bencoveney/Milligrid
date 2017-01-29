@@ -2,12 +2,12 @@
 @mixin column {
   display: block;
   flex: 1;
+  margin-bottom: $gutter-width-vertical;
   margin-left: 0;
   max-width: 100%;
-  width: 100%;
   min-width: $container-max-width / $maximum-items-per-row;
-  margin-bottom: $gutter-width-vertical;
   padding: 0 $gutter-width;
+  width: 100%;
 
   // Smaller than mobile screen
   @media (max-width: $columns-as-rows-threshold) {
@@ -46,7 +46,7 @@
   margin-left: $percent;
 }
 
-@mixin column-vertical-alignment-classes() {
+@mixin column-vertical-alignment-classes {
   &.#{$rule-prefix}column-top {
     @include column-top;
   }
@@ -68,7 +68,7 @@
   }
 }
 
-@mixin column-width-classes() {
+@mixin column-width-classes {
   // Larger than mobile screen
   @media (min-width: $columns-as-rows-threshold) {
     @for $i from 1 through $maximum-items-per-row {
@@ -81,7 +81,7 @@
   }
 }
 
-@mixin column-offset-classes() {
+@mixin column-offset-classes {
   // Larger than mobile screen
   @media (min-width: $columns-as-rows-threshold) {
     @for $i from 1 through $maximum-items-per-row {
@@ -97,7 +97,7 @@
 // Construction of the static column rules.
 .#{$rule-prefix}column {
   @include column;
-  @include column-vertical-alignment-classes();
-  @include column-width-classes();
-  @include column-offset-classes();
+  @include column-vertical-alignment-classes;
+  @include column-width-classes;
+  @include column-offset-classes;
 }

@@ -47,6 +47,14 @@ module.exports = function ( grunt ) {
       }
     },
 
+    // Lint Sass files.
+    sasslint: {
+      options: {
+        configFile: '.sass-lint.yml'
+      },
+      target: ['src/\*.scss']
+    },
+
     // Parse CSS and add vendor-prefixed CSS properties using the Can I Use database.
     autoprefixer: {
       default: {
@@ -74,6 +82,7 @@ module.exports = function ( grunt ) {
   grunt.registerTask( 'build', [
     'clean',
     'sass',
+    'sasslint',
     'autoprefixer'
   ]);
 

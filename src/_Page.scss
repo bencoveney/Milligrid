@@ -8,13 +8,15 @@
   padding: 9.6rem 0;
   text-align: center;
 
-  h1.title {
-    background-color: transparent;
-    border-bottom: 0;
-    font-size: 4em;
-    margin: 0;
-    padding: 0;
-    text-shadow: 2px 2px 5px $shadow-color;
+  h1 {
+    &.title {
+      background-color: transparent;
+      border-bottom: 0;
+      font-size: 4em;
+      margin: 0;
+      padding: 0;
+      text-shadow: 2px 2px 5px $shadow-color;
+    }
   }
 }
 

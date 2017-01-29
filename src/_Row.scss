@@ -1,13 +1,13 @@
 // Base row rules.
 @mixin row {
-  // No spacing, just a container
-  padding: 0;
-  margin: 0 0 0 (0 - $gutter-width);
-
   // Display the content in rows
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+
+  // No spacing, just a container
+  margin: 0 0 0 (0 - $gutter-width);
+  padding: 0;
 
   // Fill the parent container
   width: calc(100% + 2rem);
@@ -47,7 +47,7 @@
   }
 }
 
-@mixin row-vertical-alignment-classes() {
+@mixin row-vertical-alignment-classes {
   &.#{$rule-prefix}row-top {
     @include row-top;
   }
@@ -69,7 +69,7 @@
   }
 }
 
-@mixin row-number-classes() {
+@mixin row-number-classes {
   @for $i from 1 through $maximum-items-per-row {
     &.#{$rule-prefix}row-#{$i} {
       @include row-number($i, #{$rule-prefix}column);
@@ -81,6 +81,6 @@
 .#{$rule-prefix}row {
   @include row;
 
-  @include row-vertical-alignment-classes();
-  @include row-number-classes();
+  @include row-vertical-alignment-classes;
+  @include row-number-classes;
 }

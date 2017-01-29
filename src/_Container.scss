@@ -1,15 +1,11 @@
-// Base container rules.
+// Base container rules. Assume the user defined width if possible, fall back
+// to using all available space. Centered. Include a gutter.
 @mixin container {
-  // Centered
   margin: 0 auto;
-  position: relative;
-
-  // Assume the user defined width if possible, fall back to using all available space
   max-width: $container-max-width;
-  width: 100%;
-
-  // Include a gutter
   padding: 0 $gutter-width;
+  position: relative;
+  width: 100%;
 }
 
 // Construction of the static container rules.
