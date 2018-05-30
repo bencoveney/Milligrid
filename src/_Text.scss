@@ -7,8 +7,8 @@ html {
 
 body {
   color: $foreground-color;
-  font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-  font-weight: 300;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-weight: 400;
   letter-spacing: .01em;
 }
 
@@ -52,9 +52,8 @@ a {
 h1 {
   background-color: $background-color-shaded;
   border-bottom: .1rem solid $theme-color;
-  font-family: 'Lobster', cursive;
   font-size: 3rem;
-  font-weight: 400;
+  font-weight: 100;
   margin: 2.4rem 0 - $gutter-width 2.3rem;
   padding: 0 $gutter-width;
 }
@@ -113,15 +112,13 @@ ol {
 
 // Code styling, both inline and multi-line
 @mixin code-font {
-  background-color: $background-color-inverted;
-  color: $foreground-color-inverted;
-  font-family: 'Roboto Mono', Consolas, Courier New, Courier, monospace;
+  background-color: $theme-color-light;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
 }
 
 code {
   @include code-font;
 
-  border-radius: .3rem;
   font-size: .9em;
   padding: 0 .3em;
 }
@@ -129,13 +126,11 @@ code {
 pre {
   @include code-font;
 
-  border-radius: 1rem;
   display: block;
 
   code {
     @include code-font;
 
-    border-radius: 1rem;
     display: block;
     font-size: 1.5rem;
     margin: 0 1.2rem;
