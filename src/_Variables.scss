@@ -1,7 +1,7 @@
 // An optional prefix to place in front of all css rules.
 // This allows for compatibility with other frameworks which share class names (i.e. Bootstrap, Milligram).
-// Example: "mg-"
-$rule-prefix: "" !default;
+// Example: 'mg-'
+$rule-prefix: '' !default;
 
 // Grid width
 $container-max-width: 120rem !default;
@@ -24,10 +24,15 @@ $columns-as-rows-threshold: 40rem !default;
 
 // MilligridExtended options:
 
-// The color for standard body text
-$text-color: #222222 !default;
+$theme-color: rgb(26, 135, 182) !default;
+$theme-color-dark: rgb(18, 72, 122) !default;
+$theme-color-light: rgb(232, 244, 248) !default;
 
-$shaded-background-color: #eeeeee !default;
+$foreground-color: #222 !default;
+$foreground-color-lightened: #777 !default;
+$foreground-color-inverted: #fff !default;
 
-// The color for visual flair
-$highlight-color: #9b4dca !default;
+$background-color-shaded: #eee !default;
+$background-color-inverted: #222 !default;
+
+$shadow-color: rgba(0, 0, 0, .3);
