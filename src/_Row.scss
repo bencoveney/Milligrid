@@ -9,7 +9,7 @@
   margin: 0 0 0 (0 - $gutter-width);
   padding: 0;
 
-  // When the body is RTL the margin needs to be applied to the right of the container.
+  // When the body is RTL the margin needs to be applied to the right of the row.
   @at-root [dir='rtl'] & {
     margin: 0 (0 - $gutter-width) 0 0;
   }

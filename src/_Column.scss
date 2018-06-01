@@ -44,6 +44,12 @@
 
 @mixin column-offset($percent) {
   margin-left: $percent;
+
+  // When the body is RTL the margin needs to be applied to the right of the column.
+  @at-root [dir='rtl'] & {
+    margin-left: 0;
+    margin-right: $percent;
+  }
 }
 
 @mixin column-vertical-alignment-classes {
