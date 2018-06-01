@@ -7,7 +7,7 @@
   <title>Milligrid</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Roboto+Mono' rel='stylesheet' type='text/css'>
@@ -19,19 +19,16 @@
     a.show-guidelines {
       display: block;
       padding: 1rem;
-      border: 1px solid #000;
-      border-radius: 1rem;
       position: fixed;
       top: 1rem;
       right: 1rem;
       z-index: 100;
       background-color: #fff;
-      box-shadow: 3px 3px 3px rgba(0, 0, 0, .5);
-      color: #9b4dca;
+      box-shadow: 3px 0 3px rgba(0, 0, 0, .25);
+      color: rgb(26, 135, 182);
     }
     a.show-guidelines:hover {
-      background-color: #9b4dca;
-      color: #fff;
+      background-color: rgb(193, 229, 245);
     }
 
     /* Displays the guidelines as a background image */
@@ -40,40 +37,40 @@
       background-position: top center;
       background-repeat: repeat-y;
     }
-    
+
     .demo * {
       background-image: none;
       background-color: transparent;
       color: #000000;
     }
-    
+
     /* Demo enhancements */
     .highlight {
-      color: #9b4dca;
+      color: rgb(34, 158, 211);
     }
     .sample.row, .sample .row {
-      border: .1rem solid #b982d9;
-      background-color: #ebdbf4;
+      border: .1rem solid rgb(113, 196, 231);
+      background-color: rgb(193, 229, 245);
       padding: 1.1rem 1rem;
       margin-top: 0;
       margin-bottom: 0;
     }
     .sample .column {
-      border: .1rem dashed #cea7e4;
-      background-color: #f1e5f7;
+      border: .1rem dashed rgb(147, 211, 238);
+      background-color: rgb(218, 243, 253);
       padding: 1.1rem 1rem;
       margin-top: 0;
       margin-bottom: 0;
     }
-    
+
     /* Some none-code elements could do with a monospace font */
     .monospace {
-      font-family: 'Roboto Mono', monospace;
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
     }
   </style>
-  
+
   <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
-  
+
   <script>
     window.onload = function() {
       // Show guidelines on button click
@@ -82,7 +79,7 @@
       });
     };
   </script>
-  
+
 </head>
 
 <body>
@@ -411,14 +408,6 @@
       <div class="column">
         <p>The Milligrid system also includes an extended variant which goes beyond the grid system to provide base styling for other HTML elements.</p>
         <p>The system's primary aim is to establish a <em>vertical rhythm</em> to the document. The extended styles are incomplete and undocumented, however you can see them in use on this page.</p>
-      </div>
-      <div class="column">
-        <p>To use Milligrid Extended on your site you must include the following google web-fonts:</p>
-        <ul>
-          <li>Roboto</li>
-          <li>Roboto-Mono</li>
-          <li>Lobster</li>
-        </ul>
       </div>
     </div>
   </div>
