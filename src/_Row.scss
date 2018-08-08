@@ -6,13 +6,8 @@
   flex-wrap: wrap;
 
   // No spacing, just a container
-  margin: 0 0 0 (0 - $gutter-width);
+  margin: 0 (0 - $gutter-width);
   padding: 0;
-
-  // When the body is RTL the margin needs to be applied to the right of the row.
-  @at-root [dir='rtl'] & {
-    margin: 0 (0 - $gutter-width) 0 0;
-  }
 
   // Fill the parent container
   width: calc(100% + 2rem);
