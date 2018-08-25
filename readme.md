@@ -1,6 +1,7 @@
 # Milligrid
 
-[![GitHub version](https://badge.fury.io/gh/bencoveney%2FMilligrid.svg)](https://badge.fury.io/gh/bencoveney%2FMilligrid) [![Bower version](https://badge.fury.io/bo/milligrid.svg)](https://badge.fury.io/bo/milligrid) [![Code Climate](https://codeclimate.com/github/bencoveney/Milligrid/badges/gpa.svg)](https://codeclimate.com/github/bencoveney/Milligrid)
+[![GitHub version](https://badge.fury.io/gh/bencoveney%2FMilligrid.svg)](https://badge.fury.io/gh/bencoveney%2FMilligrid) [![Bower version](https://badge.fury.io/bo/milligrid.svg)](https://badge.fury.io/bo/milligrid)
+[![Code Climate](https://codeclimate.com/github/bencoveney/Milligrid/badges/gpa.svg)](https://codeclimate.com/github/bencoveney/Milligrid)
 
 Milligrid is a responsive CSS grid system which uses flexbox as a basis for its layout. It is based on the excellent grid built into [Milligram](https://milligram.github.io), which was in turn based on work by [Philip Walton](http://philipwalton.github.io/solved-by-flexbox/demos/grids/). Milligrid aims to take the brilliant Milligram grid and provide it in a standalone package with enhanced configuration options in the form of Sass variables.
 
@@ -8,7 +9,13 @@ Milligrid is a responsive CSS grid system which uses flexbox as a basis for its 
 
 ## Get Milligrid
 
-You can either [download Milligrid](https://github.com/bencoveney/Milligrid/releases) directly or install it via bower:
+You can either [download Milligrid](https://github.com/bencoveney/Milligrid/releases) directly or install it via npm or bower:
+
+NPM:
+
+```npm install milligrid --save```
+
+Bower:
 
 ```bower install milligrid```
 
